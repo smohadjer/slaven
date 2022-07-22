@@ -1,0 +1,78 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Demo Website</title>
+    <meta name="description" content="Boilerplate for responsvie Websites"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="resources/css/styles.min.css">
+	<body>
+		<header class="header">
+		  <div class="logo">
+		    Logo or Wordmark 
+		    <span>Optional subline for Website</span>
+		  </div>
+		
+		  <!-- for mobile navigation -->
+		  <button class="hamburger hamburger--spin" type="button">
+		      <span class="hamburger-box">
+		          <span class="hamburger-inner"></span>
+		      </span>
+		      <!--<span class="hamburger-label">Menu</span>-->
+		  </button>
+		  <nav data-set-max-height="true">
+		    <ul>
+		      <li><a href="index.html">Home</a></li>
+		      <li><a href="about.html">About</a></li>
+		      <li>Contact</a></li>
+		      <li><a href="test.html">Test</a></li>
+		      <li><a href="demo.html">Demo</a></li>
+		    </ul>
+		  </nav>
+		</header>
+    <main>
+      <article>
+        <header class="stage stage--text-image">
+          <div>
+            <img class="responsive object-fit-cover"
+              srcset="assets/mobile/contact.jpg 1024w,
+                      assets/contact.jpg 2400w"
+              sizes="(max-width: 1023px) 100vw,
+                      100vw"
+              src="assets/contact.jpg"
+              width="1024"
+              height="683"
+              alt="" />
+          </div>
+          <h1>Contact</h1>
+        </header>
+        <p>Example of a test paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Another paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="handlebars">
+            <!-- content is inserted via js -->
+        </div>
+      </article>
+    </main>
+    <footer>
+      <div class="footer__content">
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="disclosure.html">Legal Notice</a></li>
+        </ul>
+        <div>
+          <span class="copyright">&copy; 2022 Saeid Mohadjer</span>
+          <ul>
+            <li><a title="Validate this page" href="https://validator.w3.org/check/referer">HTML5 Valid</a></li>
+            <li><a title="Validate this page" href="https://jigsaw.w3.org/css-validator/check/referer">CSS3 Valid</a></li>
+            <li><a title="PageSpeed Insights" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fboilerplate.saeidmohadjer.com%2F">PageSpeed Insights</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      var myApp = {};
+    </script>
+    <script src="resources/js/bundle.js"></script>
+    <script src="resources/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+header .hamburger {
+	vertical-align: middle;
+	padding: 0;
+
+	.no-js & {
+		display: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+
+	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+		border-radius: 0;
+	}
+
+	.hamburger-label {
+		font-size: 16px;
+		margin-left: 5px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+  .hamburger-box {
+    width: 36px;
+  }
+
+  .hamburger-inner, 
+  .hamburger-inner::before, 
+  .hamburger-inner::after {
+    width: 36px;
+  }
+}

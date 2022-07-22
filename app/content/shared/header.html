@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="logo">
+    Logo or Wordmark 
+    <span>Optional subline for Website</span>
+  </div>
+
+  <!-- for mobile navigation -->
+  <button class="hamburger hamburger--spin" type="button">
+      <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+      </span>
+      <!--<span class="hamburger-label">Menu</span>-->
+  </button>
+  <nav data-set-max-height="true">
+    <ul>
+      <li>{{#if home}}Home{{else}}<a href="index.html">Home</a>{{/if}}</li>
+      <li>{{#if about}}About{{else}}<a href="about.html">About</a>{{/if}}</li>
+      <li>{{#if contact}}Contact{{else}}<a href="contact.html">Contact{{/if}}</a></li>
+      <li>{{#if test}}Test{{else}}<a href="test.html">Test{{/if}}</a></li>
+      <li>{{#if demo}}Demo{{else}}<a href="demo.html">Demo{{/if}}</a></li>
+    </ul>
+  </nav>
+</header>

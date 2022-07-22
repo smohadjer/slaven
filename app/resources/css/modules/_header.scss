@@ -1,0 +1,109 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  margin: 10px 20px 10px;
+  flex-wrap: wrap;
+  font-family: Quicksand, arial, verdana, sans-serif;
+
+	@media (min-width: 1024px) {
+    margin: 22px 20px 25px;
+	}  
+
+  @media (min-width: 1320px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+	.logo {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.4;
+
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.6em;
+
+      span {
+        font-size: 20px;
+      }
+  
+    }
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+  nav {
+    font-weight: bold;
+
+    @media (max-width: 767px) {
+      flex: 0 0 100%;
+      margin-top: 10px;
+
+      .js & {
+        overflow: hidden;
+        transition: max-height 0.5s;
+        margin-bottom: 0;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      .js & {
+        max-height: none !important; //used !important to overwrite max-height set by js
+      }
+    }
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+
+  
+      li {
+        line-height: 1.5;
+  
+        @media (max-width: 767px) {
+          border-bottom: solid 1px #ccc;
+          line-height: 2.4;
+  
+          &:last-child {
+            border: none;
+          }
+  
+          a {
+            display: block;
+          }
+        }
+  
+        @media (min-width: 768px) {
+          display: inline;
+          margin-left: 20px;
+          font-size: 1.1em;
+  
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+  
+        &.github a {
+          background: url(../img/GitHub-Mark-64px.png) no-repeat;
+          background-size: contain;
+          padding-left: 24px;
+  
+        }
+      }
+    }
+  }
+  
+}

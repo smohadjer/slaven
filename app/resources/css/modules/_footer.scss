@@ -1,0 +1,45 @@
+footer {
+  padding: 15px 20px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+  border-top: solid 1px #ccc;
+  font-size: 1rem;
+
+  @media (min-width: 1320px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer__content {
+    color: #666;
+
+    .copyright {
+      margin-bottom: 0.5em;
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline;
+			margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+		}
+	}
+}

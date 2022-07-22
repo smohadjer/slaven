@@ -1,0 +1,34 @@
+{
+	"name": "boilerplate",
+	"version": "1.0.1",
+	"description": "Boilerplate for Web projects",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/smohadjer/boilerplate"
+	},
+	"license": "MIT",
+	"scripts": {
+		"precompile": "node node_modules/build/bin/clean.js",
+		"compile": "node node_modules/build/bin/compile.js",
+		"copy": "node node_modules/build/bin/copyPublic.js",
+		"copyDist": "node node_modules/build/bin/copydist.js",
+		"sass": "node node_modules/build/bin/sassTocss",
+		"hbs": "node node_modules/build/bin/hbs.js",
+		"watch": "node node_modules/build/bin/watch-content.js & node node_modules/build/bin/watch-css.js & node node_modules/build/bin/watch-js.js & node node_modules/build/bin/watch-img.js & node node_modules/build/bin/watch-content.js",
+		"useref": "node node_modules/build/bin/useref.js",
+		"serve": "npm run compile && npm run copy && npm run sass && npm run hbs",
+		"start": "npm run serve && npm run watch",
+		"build": "npm run serve && rollup -c && npm run copyDist && npm run useref"
+	},
+	"devDependencies": {
+		"build": "git://github.com/smohadjer/build#master",
+		"handlebars": "^4.7.7"
+	},
+	"dependencies": {
+		"hamburgers": "0.9.3",
+		"helpers": "git+https://github.com/smohadjer/helpers.git"
+	},
+	"engines": {
+		"node": ">=16.13.0"
+	}
+}

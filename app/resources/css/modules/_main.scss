@@ -1,0 +1,130 @@
+@media (min-width: 1024px) {
+  /* to stop pages jumping horizontally when scrollbar appears or disappears */
+  html { overflow-y: scroll; }
+}
+
+body {
+	font: 16px/1.5 Quicksand, arial, verdana, sans-serif;
+	margin: 0 auto;
+  overflow-wrap: break-word; /* so that inline elements such as long words do not cause horizontal scrolling. */
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1320px) {
+    max-width: 1280px;
+  }
+}
+
+a {
+	text-decoration: none;
+  color: #225E90;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+  &.external {
+    background: url(../img/external.svg) no-repeat left center;
+    background-size: 16px;
+    padding-left: 20px;
+  }
+}
+
+h1, h2, h3, h4, p, ul, ol {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+figure {
+	margin: 0;
+  margin-top: 1em;
+
+	max-width: 768px;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+img.responsive {
+  width: 100%;
+  height: auto;
+  /* to fix blurry downscaled images in Chrome */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+img.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main > article {
+  padding: 0 20px;
+
+  @media (min-width: 1320px) {
+    padding: 0;
+  }
+}
+
+.stage {
+  margin: 0 -20px;
+
+  @media (min-width: 1320px) {
+    margin: 0;
+  }
+
+  h1 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    background-color: rgba(34,99,153,1);
+    background: linear-gradient(45deg, rgba(29,58,82,1) 0%, rgba(34,99,153,1) 60%);
+    align-items: center;
+
+    div {
+      order: 2;
+      width: 66.66%;
+      border-left: 5px solid white;
+      height: 50vh;
+    }
+  
+    h1 {
+      order: 1;
+      color: white;
+      margin: 0;
+      width: 33.33%;
+      padding: 2%;
+    }
+  }
+}
+
+

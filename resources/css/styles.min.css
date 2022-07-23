@@ -748,41 +748,28 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   margin: 10px 20px 10px;
   flex-wrap: wrap;
   font-family: Quicksand, arial, verdana, sans-serif;
+  position: absolute;
+  width: 100%;
+  padding: 0 20px 40px;
+  margin: 0 !important;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
 }
 @media (min-width: 1024px) {
   .header {
-    margin: 22px 20px 25px;
+    margin: 22px 0 25px;
   }
 }
 @media (min-width: 1320px) {
   .header {
     margin-left: 0;
     margin-right: 0;
+    padding: 10px 40px 60px;
   }
-}
-.header .logo {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.4;
-}
-.header .logo span {
-  font-weight: 500;
-  font-size: 14px;
-  display: block;
-}
-@media (min-width: 1024px) {
-  .header .logo {
-    font-size: 1.6em;
-  }
-  .header .logo span {
-    font-size: 20px;
-  }
-}
-.header .logo:hover {
-  text-decoration: none;
 }
 .header nav {
-  font-weight: bold;
+  font-weight: 500;
+  margin-top: 10px;
 }
 @media (max-width: 767px) {
   .header nav {
@@ -812,6 +799,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 .header nav ul li {
   line-height: 1.5;
+  color: white;
 }
 @media (max-width: 767px) {
   .header nav ul li {
@@ -828,7 +816,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 @media (min-width: 768px) {
   .header nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 1.1em;
   }
   .header nav ul li:first-child {
@@ -839,6 +827,44 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   background: url(../img/GitHub-Mark-64px.png) no-repeat;
   background-size: contain;
   padding-left: 24px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.4;
+  color: white;
+  position: relative;
+  top: 120px;
+  left: 20px;
+}
+.logo span {
+  font-weight: normal;
+  font-size: 13px;
+  display: block;
+  letter-spacing: 1px;
+}
+@media (min-width: 1024px) {
+  .logo {
+    font-size: 1em;
+  }
+  .logo span {
+    font-size: 0.55em;
+    line-height: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1400px) {
+  .logo {
+    font-size: 2.8em;
+  }
+}
+.logo:hover {
+  text-decoration: none;
 }
 
 header .hamburger {
@@ -880,30 +906,23 @@ header .hamburger .hamburger-inner::after {
 footer {
   padding: 15px 20px;
   margin-top: 40px;
-  margin-bottom: 20px;
-  border-top: solid 1px #ccc;
   font-size: 1rem;
-}
-@media (min-width: 1320px) {
-  footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  background: url(../img/footer.jpg) repeat-x;
 }
 footer .footer__content {
-  color: #666;
+  color: #fff;
 }
 footer .footer__content .copyright {
   margin-bottom: 0.5em;
   display: block;
 }
+footer .footer__content address {
+  font-style: normal;
+}
 @media (min-width: 1024px) {
   footer .footer__content {
     display: flex;
     justify-content: space-between;
-  }
-  footer .footer__content:last-child {
-    text-align: right;
   }
 }
 footer ul {
@@ -936,15 +955,11 @@ body {
     font-size: 18px;
   }
 }
-@media (min-width: 1320px) {
-  body {
-    max-width: 1280px;
-  }
-}
 
 a {
   text-decoration: none;
   color: #225E90;
+  color: #C64200;
 }
 a:hover {
   text-decoration: underline;
@@ -1000,20 +1015,25 @@ img.object-fit-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 main > article {
   padding: 0 20px;
 }
+@media (min-width: 1040px) {
+  main > article {
+    max-width: 900px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 1320px) {
   main > article {
-    padding: 0;
+    max-width: 1200px;
   }
 }
 
-.stage {
-  margin: 0 -20px;
-}
 @media (min-width: 1320px) {
   .stage {
     margin: 0;
@@ -1026,18 +1046,27 @@ main > article {
 .stage img {
   vertical-align: bottom;
 }
+.stage .teaser-wrapper {
+  position: absolute;
+  z-index: 10;
+  left: 58vw;
+  top: 40vh;
+  color: white;
+  width: 35vw;
+  height: 50vh;
+  overflow-y: auto;
+}
 @media (min-width: 1024px) {
   .stage {
-    display: flex;
     background-color: #226399;
     background: linear-gradient(45deg, #1d3a52 0%, #226399 60%);
     align-items: center;
   }
-  .stage div {
+  .stage div.bg {
     order: 2;
-    width: 66.66%;
+    width: 100%;
     border-left: 5px solid white;
-    height: 50vh;
+    height: 100vh;
   }
   .stage h1 {
     order: 1;
@@ -1046,6 +1075,35 @@ main > article {
     width: 33.33%;
     padding: 2%;
   }
+}
+
+.teaser {
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.25);
+}
+.teaser:last-child {
+  border: 0;
+}
+.teaser h2 {
+  background: url(../img/ball.svg) no-repeat;
+  background-size: 22px;
+  background-position: 0 center;
+  padding-left: 35px;
+  font-size: 30px;
+}
+.teaser h3 {
+  margin-top: 5px;
+  font-size: 20px;
+  padding-left: 35px;
+  line-height: 1.5;
+}
+.teaser h3 .location {
+  background: url(../img/location.svg) no-repeat;
+  background-size: 18px;
+  background-position: 0 center;
+  display: block;
+  padding-left: 25px;
 }
 
 .accordion {

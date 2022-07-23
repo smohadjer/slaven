@@ -5,43 +5,26 @@
   margin: 10px 20px 10px;
   flex-wrap: wrap;
   font-family: Quicksand, arial, verdana, sans-serif;
+  position: absolute;
+  width: 100%;
+  padding: 0 20px 40px;
+  margin: 0 !important;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%);
 
 	@media (min-width: 1024px) {
-    margin: 22px 20px 25px;
+    margin: 22px 0 25px;
 	}  
 
   @media (min-width: 1320px) {
     margin-left: 0;
     margin-right: 0;
+    padding: 10px 40px 60px;
   }
 
-	.logo {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 1.4;
-
-    span {
-      font-weight: 500;
-      font-size: 14px;
-      display: block;
-    }
-
-    @media (min-width: 1024px) {
-      font-size: 1.6em;
-
-      span {
-        font-size: 20px;
-      }
-  
-    }
-
-		&:hover {
-			text-decoration: none;
-		}
-	}
-
   nav {
-    font-weight: bold;
+    font-weight: 500;
+    margin-top: 10px;
 
     @media (max-width: 767px) {
       flex: 0 0 100%;
@@ -72,6 +55,8 @@
   
       li {
         line-height: 1.5;
+        color: white;
+
   
         @media (max-width: 767px) {
           border-bottom: solid 1px #ccc;
@@ -88,7 +73,7 @@
   
         @media (min-width: 768px) {
           display: inline;
-          margin-left: 20px;
+          margin-left: 30px;
           font-size: 1.1em;
   
           &:first-child {

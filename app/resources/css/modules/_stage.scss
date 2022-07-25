@@ -1,47 +1,33 @@
 .stage {
-
-  @media (min-width: 1320px) {
-    margin: 0;
-  }
-
-  h1 {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  img {
+  .bg img {
     vertical-align: bottom;
   }
 
-  .teaser-wrapper {
-    position: absolute;
-    z-index: 10;
-    left: 58vw;
-    top: 40vh;
-    color: white;
-    width: 35vw;
-    height: 50vh;
-    overflow-y: auto;
-  }
+  @media (min-width: 768px) {
+    .bg {
+      height: 50vh;
+    }
 
-  @media (min-width: 1024px) {
-    background-color: rgba(34,99,153,1);
-    background: linear-gradient(45deg, rgba(29,58,82,1) 0%, rgba(34,99,153,1) 60%);
-    align-items: center;
-
-    div.bg {
-      order: 2;
-      width: 100%;
-      border-left: 5px solid white;
+    &--full-height .bg {
       height: 100vh;
     }
-  
-    h1 {
-      order: 1;
+  }
+
+  .teaser-wrapper {
+    background: #ccc;
+    padding: 20px;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      z-index: 10;
+      left: 58vw;
+      bottom: 5vh;
       color: white;
-      margin: 0;
-      width: 33.33%;
-      padding: 2%;
+      width: 40vw;
+      height: 50vh;
+      overflow-y: auto;
+      background: none;
+      padding: 0;
     }
   }
 }

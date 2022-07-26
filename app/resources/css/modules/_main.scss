@@ -1,3 +1,5 @@
+@import "./settings";
+
 @media (min-width: 1024px) {
   /* to stop pages jumping horizontally when scrollbar appears or disappears */
   html { overflow-y: scroll; }
@@ -15,9 +17,7 @@ body {
 
 a {
 	text-decoration: none;
-  color: #225E90;
-  color: #C64200;
-  //color: #E8E000;
+  color: $orange;
 
 	&:hover {
 		text-decoration: underline;
@@ -32,6 +32,7 @@ a {
 
 h1, h2, h3, h4, p, ul, ol {
   margin-bottom: 0;
+  margin-top: 1em;
 }
 
 h1 {
@@ -80,7 +81,7 @@ img.object-fit-cover {
 }
 
 main > article {
-  padding: 0 20px;
+  padding: 0 10px;
 
   @media (min-width: 1040px) {
     max-width: 900px;

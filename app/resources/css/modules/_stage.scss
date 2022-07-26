@@ -1,11 +1,12 @@
 .stage {
+  
   .bg img {
     vertical-align: bottom;
   }
 
   @media (min-width: 768px) {
     .bg {
-      height: 50vh;
+      height: 75vh;
     }
 
     &--full-height .bg {
@@ -14,8 +15,8 @@
   }
 
   .teaser-wrapper {
-    background: #ccc;
-    padding: 20px;
+    background: white;
+    padding: 20px 10px 0;
 
     @media (min-width: 768px) {
       position: absolute;

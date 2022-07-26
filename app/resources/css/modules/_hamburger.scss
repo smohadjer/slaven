@@ -30,13 +30,13 @@ header .hamburger {
 	}
 
   .hamburger-box {
-    width: 36px;
+    width: 32px;
   }
 
   .hamburger-inner, 
   .hamburger-inner::before, 
   .hamburger-inner::after {
-    width: 36px;
-		background-color: white;
+    width: 32px;
+		background-color: $orange;
   }
 }

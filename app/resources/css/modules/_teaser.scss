@@ -31,16 +31,16 @@
   }
 
   &:last-child {
-    border: 0;
+    //border: 0;
     margin-bottom: 0;
-    padding-bottom: 0;
+    //padding-bottom: 0;
   }
 
   h2 {
     background: url(../img/ball.svg) no-repeat;
-    background-size: 18px;
+    background-size: 15px;
     background-position: 0 center;
-    padding-left: 28px;   
+    padding-left: 25px;   
     font-size: 20px;   
     margin-top: 0;
 
@@ -71,7 +71,7 @@
     }
 
     a + a {
-      border-left: solid 2px #000;
+      border-left: solid 1px #777;
       padding-left: 10px;
       margin-left: 10px;
 
@@ -80,14 +80,6 @@
         padding-left: 20px;
         margin-left: 20px;
       }
-    }
-
-    .location {
-      background: url(../img/location.svg) no-repeat;
-      background-size: 18px;
-      background-position: 0 center;
-      display: block;
-      padding-left: 25px;
     }
   }
 }

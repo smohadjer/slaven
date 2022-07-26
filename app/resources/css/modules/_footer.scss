@@ -2,11 +2,14 @@ footer {
   padding: 15px 20px;
 	margin-top: 40px;
   font-size: 1rem;
-  background: url(../img/footer.jpg) repeat-x;
+  background: $yellow;
+
+  @media (min-width: 768px) {
+    background: url(../img/footer.jpg) repeat-x;
+    color: white;
+  }
 
   .footer__content {
-    color: #fff;
-
     .copyright {
       margin-bottom: 0.5em;
       display: block;

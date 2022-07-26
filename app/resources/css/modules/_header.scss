@@ -7,9 +7,9 @@
   flex-wrap: wrap;
   font-family: Quicksand, arial, verdana, sans-serif;
   width: 100%;
-  padding: 10px 10px 5px;
+  padding: 5px 10px 0;
   box-sizing: border-box;
-  background: #fff;
+  background: $yellow;
 
   @media (min-width: 768px) {
     position: absolute;
@@ -58,9 +58,10 @@
       li {
         line-height: 1.5;
         color: black;
+        font-weight: bold;
   
         @media (max-width: 767px) {
-          border-bottom: solid 1px #ccc;
+          border-bottom: solid 1px #000;
           line-height: 2.4;
   
           &:last-child {

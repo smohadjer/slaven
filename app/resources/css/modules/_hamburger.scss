@@ -22,13 +22,6 @@ header .hamburger {
 		border-radius: 0;
 	}
 
-	.hamburger-label {
-		font-size: 16px;
-		margin-left: 5px;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-
   .hamburger-box {
     width: 32px;
   }
@@ -37,6 +30,6 @@ header .hamburger {
   .hamburger-inner::before, 
   .hamburger-inner::after {
     width: 32px;
-		background-color: $orange;
+		background-color: black;
   }
 }

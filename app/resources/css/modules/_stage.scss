@@ -1,8 +1,24 @@
+@import './settings';
+
 .stage {
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background: $yellow;
+  overflow-y: hidden;
+
+
+  .bg {
+    border: solid 1px blue;
+  }
   
   .bg img {
+    transform: rotate(-3deg) scale(1.1);
+    outline: 1px solid transparent;
+    will-change: transform;
     vertical-align: bottom;
   }
+
 
   @media (min-width: 768px) {
     .bg {
@@ -15,8 +31,8 @@
   }
 
   .teaser-wrapper {
-    background: white;
-    padding: 20px 10px 0;
+    background: $yellow;
+    margin-top: 1ß0px;
 
     @media (min-width: 768px) {
       position: absolute;

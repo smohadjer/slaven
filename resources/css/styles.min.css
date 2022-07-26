@@ -741,6 +741,24 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   font-weight: bold;
   font-display: swap;
 }
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -748,17 +766,16 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   flex-wrap: wrap;
   font-family: Quicksand, arial, verdana, sans-serif;
   width: 100%;
-  padding: 10px 20px 10px;
+  padding: 10px 10px 5px;
   box-sizing: border-box;
-  background: #000;
+  background: #fff;
 }
 @media (min-width: 768px) {
   .header {
     position: absolute;
     z-index: 10;
-    background: none;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
-    min-height: 100px;
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+    min-height: 150px;
   }
 }
 @media (min-width: 1024px) {
@@ -800,7 +817,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 .header nav ul li {
   line-height: 1.5;
-  color: white;
+  color: black;
 }
 @media (max-width: 767px) {
   .header nav ul li {
@@ -816,6 +833,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 @media (min-width: 768px) {
   .header nav ul li {
+    color: white;
     display: inline;
     margin-left: 30px;
     font-size: 1em;
@@ -828,15 +846,15 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 .logo {
   font-weight: bold;
   font-size: 20px;
-  line-height: 1.4;
-  color: white;
+  line-height: 1.3;
+  color: #000;
   position: relative;
-  top: 1px;
 }
 @media (min-width: 768px) {
   .logo {
-    top: 20px;
-    left: 40px;
+    color: white;
+    top: 16px;
+    left: 35px;
   }
   .home .logo {
     top: 120px;
@@ -846,7 +864,11 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   font-weight: normal;
   font-size: 13px;
   display: block;
-  letter-spacing: 1px;
+}
+@media (min-width: 768px) {
+  .logo {
+    letter-spacing: 1px;
+  }
 }
 @media (min-width: 1024px) {
   .logo {
@@ -899,13 +921,13 @@ header .hamburger .hamburger-label {
   text-transform: uppercase;
 }
 header .hamburger .hamburger-box {
-  width: 36px;
+  width: 32px;
 }
 header .hamburger .hamburger-inner,
 header .hamburger .hamburger-inner::before,
 header .hamburger .hamburger-inner::after {
-  width: 36px;
-  background-color: white;
+  width: 32px;
+  background-color: #C64200;
 }
 
 footer {
@@ -943,6 +965,24 @@ footer ul li:last-child {
   margin-right: 0;
 }
 
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
 @media (min-width: 1024px) {
   /* to stop pages jumping horizontally when scrollbar appears or disappears */
   html {
@@ -963,7 +1003,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #225E90;
   color: #C64200;
 }
 a:hover {
@@ -977,6 +1016,7 @@ a.external {
 
 h1, h2, h3, h4, p, ul, ol {
   margin-bottom: 0;
+  margin-top: 1em;
 }
 
 h1 {
@@ -1024,7 +1064,7 @@ img.object-fit-cover {
 }
 
 main > article {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 @media (min-width: 1040px) {
   main > article {
@@ -1044,15 +1084,15 @@ main > article {
 }
 @media (min-width: 768px) {
   .stage .bg {
-    height: 50vh;
+    height: 75vh;
   }
   .stage--full-height .bg {
     height: 100vh;
   }
 }
 .stage .teaser-wrapper {
-  background: #ccc;
-  padding: 20px;
+  background: white;
+  padding: 20px 10px 0;
 }
 @media (min-width: 768px) {
   .stage .teaser-wrapper {
@@ -1100,15 +1140,13 @@ main > article {
   }
 }
 .teaser:last-child {
-  border: 0;
   margin-bottom: 0;
-  padding-bottom: 0;
 }
 .teaser h2 {
   background: url(../img/ball.svg) no-repeat;
-  background-size: 18px;
+  background-size: 15px;
   background-position: 0 center;
-  padding-left: 28px;
+  padding-left: 25px;
   font-size: 20px;
   margin-top: 0;
 }
@@ -1142,7 +1180,7 @@ main > article {
   }
 }
 .teaser h3 a + a {
-  border-left: solid 2px #000;
+  border-left: solid 1px #777;
   padding-left: 10px;
   margin-left: 10px;
 }
@@ -1152,13 +1190,6 @@ main > article {
     padding-left: 20px;
     margin-left: 20px;
   }
-}
-.teaser h3 .location {
-  background: url(../img/location.svg) no-repeat;
-  background-size: 18px;
-  background-position: 0 center;
-  display: block;
-  padding-left: 25px;
 }
 
 .accordion {

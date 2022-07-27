@@ -20,9 +20,16 @@
   // }
 
   @media (min-width: 768px) {
+    background: none;
     margin: 0;
     padding: 0;
-    clip-path: none;
+    //clip-path: none;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 50px)
+    );
   }
 
   .bg {
@@ -33,7 +40,7 @@
       margin-top: 0;
 
       &--full-height {
-        height: 100vh;
+        height: 108vh;
       }
     }
 

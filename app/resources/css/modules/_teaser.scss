@@ -5,10 +5,10 @@
   margin: 0 10px 0;
   border-bottom: solid 1px rgba(0,0,0,0.5);
   position: relative;
-  animation-duration: 0.65s;
+  animation-duration: 0.8s;
   animation-name: slideinTeaser;
   animation-fill-mode: both;
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
 
   @media (min-width: 768px) {
     padding-bottom: 15px;
@@ -20,7 +20,7 @@
   }
 
   &--has-delay {
-    animation-delay: 0.4s;;
+    animation-delay: 1s;;
   }
 
   @keyframes slideinTeaser {

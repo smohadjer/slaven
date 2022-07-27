@@ -79,7 +79,7 @@
           color: white;
 
           display: inline;
-          margin-left: 30px;
+          margin-left: 20px;
           font-size: 1em;
   
           &:first-child {
@@ -87,8 +87,13 @@
           }
         }
 
-        @media (min-width: 1280px) {
-          font-size: 1.2em;
+        @media (min-width: 1024px) {
+          font-size: 1.1em;
+          font-weight: 500;
+        }
+
+        @media (min-width: 1400px) {
+          font-size: 1.25em;
           font-weight: 500;
         }
       }

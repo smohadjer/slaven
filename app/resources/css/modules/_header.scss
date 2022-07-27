@@ -10,6 +10,8 @@
   padding: 5px 10px 0;
   box-sizing: border-box;
   background: $yellow;
+  //background: linear-gradient(to bottom, $yellow 10%, #fff 100%);
+
 
   @media (min-width: 768px) {
     position: absolute;

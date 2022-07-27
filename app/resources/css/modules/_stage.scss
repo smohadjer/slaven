@@ -4,13 +4,8 @@
   width: 100%;
   overflow-x: hidden;
   padding-top: 20px;
-  background: $yellow;
   overflow-y: hidden;
-
-
-  .bg {
-    border: solid 1px blue;
-  }
+  background: $yellow;
   
   .bg img {
     transform: rotate(-3deg) scale(1.1);
@@ -32,7 +27,6 @@
 
   .teaser-wrapper {
     background: $yellow;
-    margin-top: 1ß0px;
 
     @media (min-width: 768px) {
       position: absolute;
@@ -41,8 +35,6 @@
       bottom: 5vh;
       color: white;
       width: 40vw;
-      height: 50vh;
-      overflow-y: auto;
       background: none;
       padding: 0;
     }

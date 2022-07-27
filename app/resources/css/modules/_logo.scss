@@ -12,29 +12,10 @@
     color: white;
     top: 16px;
     left: 35px;
-
-    .home & {
-      top: 120px;
-    }
-  }
-
-  span {
-    font-weight: 500;
-    font-size: 14px;
-    display: block;
-  }
-
-  @media (min-width: 768px) {
-    letter-spacing: 1px;
   }
 
   @media (min-width: 1024px) {
     font-size: 1em;
-
-    span {
-      font-size: 0.55em;
-      line-height: 1;
-    }
   }
 
   @media (min-width: 1200px) {
@@ -42,8 +23,10 @@
   }
 
   .home & {
+    @media (min-width: 768px) {
+      top: 120px;
+    }
 
-  
     @media (min-width: 1400px) {
       font-size: 2.8em;
     }  
@@ -51,5 +34,21 @@
 
   &:hover {
     text-decoration: none;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    display: block;
+    letter-spacing: 8.7px;
+
+    @media (min-width: 768px) {
+      letter-spacing: 13.8px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 0.55em;
+    }
   }
 }

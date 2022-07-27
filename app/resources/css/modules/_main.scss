@@ -84,7 +84,9 @@ main > article {
   padding: 0 15px;
 
   h3:first-child {
-    margin-top: 0;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: 1040px) {

@@ -1,5 +1,5 @@
-Demo hosted on GitHub (GitHub Pages):
-https://boilerplate.saeidmohadjer.com/
+Site hosted on GitHub via GitHub Pages at:
+https://smohadjer.github.io/slaven/
 
 ## A boilerplate for building modern HTML Websites
 

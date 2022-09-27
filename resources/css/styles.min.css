@@ -1402,22 +1402,42 @@ form table tr:nth-child(odd) td {
   background: #eee;
 }
 form table td {
-  padding: 10px 50px 10px 10px;
+  padding: 5px;
+}
+@media (min-width: 768px) {
+  form table td {
+    padding: 10px 30px 10px 10px;
+  }
 }
 form table td:first-child {
   font-weight: 500;
 }
-form span.column {
-  margin-right: 50px;
+form input[type=checkbox] {
+  margin: 0 3px 0 0;
+}
+form .column {
+  display: block;
+}
+@media (min-width: 768px) {
+  form .column {
+    margin-right: 50px;
+    display: inline;
+  }
 }
 form button {
-  font-size: 24px;
+  font-size: 20px;
   background: #C64200;
   color: white;
   border: none;
-  padding: 12px 30px;
+  padding: 10px 20px;
   margin: 20px 0px;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  form button {
+    font-size: 24px;
+    padding: 12px 30px;
+  }
 }
 form .row {
   display: block;
@@ -1428,8 +1448,15 @@ form .row label {
   min-width: 200px;
 }
 form .row input {
-  min-width: 300px;
+  width: 100%;
   border: solid 1px #ccc;
   border-radius: 0;
   padding: 5px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  form .row input {
+    width: auto;
+    min-width: 300px;
+  }
 }

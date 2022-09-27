@@ -273,6 +273,18 @@
     document.querySelectorAll('.accordion').forEach(function (el) {
       new Accordion(el);
     });
+    var form = document.querySelector('form');
+
+    if (form) {
+      console.log('page has form');
+      console.log(window.location.hash);
+
+      if (window.location.hash === '#confirmed') {
+        form.setAttribute('hidden', 'hidden');
+        var confirmation = document.querySelector('#confirmation');
+        confirmation.removeAttribute('hidden');
+      }
+    }
   });
 
 })();

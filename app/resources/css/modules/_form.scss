@@ -1,0 +1,53 @@
+form {
+  margin-top: 30px;
+
+  table {
+    margin: 10px 0;
+
+    tr:nth-child(odd) td {
+      background: #eee;
+    }
+    
+    td {
+      padding: 10px 50px 10px 10px;
+
+      &:first-child {
+        font-weight: 500;
+      }
+    }
+  }
+
+  span.column {
+    margin-right: 50px;
+  }
+
+  button {
+    font-size: 24px;
+    background: #C64200;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin: 20px 0px;
+    cursor: pointer;
+  }
+
+  .row {
+    display: block;
+    margin-top: 10px;
+
+
+    label {
+      display: inline-block;
+      min-width: 200px;
+    }
+
+    input {
+      min-width: 300px;
+      border: solid 1px #ccc;
+      border-radius: 0;
+      padding: 5px;
+    }
+  }
+}
+
+

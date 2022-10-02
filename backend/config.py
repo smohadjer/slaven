@@ -2,6 +2,9 @@ from fastapi_mail import ConnectionConfig
 from pydantic import BaseSettings
 
 from models.models import FormData
+import pathlib
+
+path = pathlib.Path("main.py").resolve().parent.parent
 
 
 class Settings(BaseSettings):
@@ -11,7 +14,7 @@ class Settings(BaseSettings):
 
 # specify .env file location as Config attribute
     class Config:
-        env_file: str = ".env"
+        env_file: str = f"{path}/.env"
 
 
 settings = Settings()

@@ -11,8 +11,6 @@ class _Tennis(type):
 
     async def registration(self, request: Request):  # TODO: Return the Json, for developement we redirect for now
         formatted_training_hours: list[str] = []
-        x = request
-        c = x.headers
         data = await request.form()
         email = data.get('email', '')
         _address = str(data.get("address", "")).replace("+", " ")

@@ -46,6 +46,10 @@
         <h1>Anmeldung zum Jugend-Sommertraining 2023</h1>
         <p>Die Anmeldung bis <strong>spätestens 15.03.2023</strong> an die unten stehende E-Mail senden.</p>
         <form method="post" action="https://tennis.deta.dev/tennis-form">
+          <span class="row hidden">
+            <label for="subject">Email subject</label>
+            <input hidden id="subject" name="subject" value="Anmeldung zum Jugend-Sommertraining 2023" />
+          </span>
           <span class="row">
             <label for="firstname">Vorname</label>
             <input id="firstname" name="firstname" required />

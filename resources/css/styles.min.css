@@ -1443,6 +1443,9 @@ form .row {
   display: block;
   margin-top: 10px;
 }
+form .row.hidden {
+  display: none;
+}
 form .row label {
   display: inline-block;
   min-width: 200px;

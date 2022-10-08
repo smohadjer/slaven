@@ -54,6 +54,9 @@ form {
     display: block;
     margin-top: 10px;
 
+    &.hidden {
+      display: none;
+    }
 
     label {
       display: inline-block;

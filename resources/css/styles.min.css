@@ -772,6 +772,9 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 @media (min-width: 768px) {
   .header {
+    background: white;
+  }
+  .header--home {
     position: absolute;
     z-index: 10;
     background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
@@ -834,7 +837,6 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 @media (min-width: 768px) {
   .header nav ul li {
-    color: white;
     display: inline;
     margin-left: 20px;
     font-size: 1em;
@@ -883,9 +885,14 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 @media (min-width: 768px) {
   .logo {
+    left: 35px;
+    margin-bottom: 0;
+    top: 10px;
+  }
+  .header--home .logo {
     color: white;
     top: 108px;
-    left: 35px;
+    margin-bottom: 5px;
   }
 }
 @media (min-width: 1024px) {
@@ -978,6 +985,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 @media (min-width: 1024px) {
   .logo .tagline {
     font-size: 0.55em;
+    margin-top: -5px;
   }
 }
 
@@ -1017,15 +1025,18 @@ footer {
   margin-top: 40px;
   font-size: 1rem;
   background: #F7AB01;
+  clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
 }
 @media (min-width: 768px) {
   footer {
     background: url(../img/footer.jpg) repeat-x;
+    background: #C64200;
     color: white;
   }
 }
 footer .footer__content a {
-  color: #f2641d;
+  color: white;
+  text-decoration: underline;
 }
 footer .footer__content .copyright {
   margin-bottom: 0.5em;
@@ -1038,11 +1049,12 @@ footer .footer__content address {
   footer .footer__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
   }
 }
 footer ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 15px 0;
   padding: 0;
 }
 footer ul li {
@@ -1208,6 +1220,9 @@ main > article {
     background: none;
     margin: 0;
     padding: 0;
+    clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%);
+  }
+  .stage--home {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
   }
 }

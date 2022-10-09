@@ -13,10 +13,14 @@
   //background: linear-gradient(to bottom, $yellow 10%, #fff 100%);
 
   @media (min-width: 768px) {
-    position: absolute;
-    z-index: 10;
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
-    min-height: 150px;
+    &--home {
+      position: absolute;
+      z-index: 10;
+      background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+      min-height: 150px;
+    }
+
+    background: white;
   }
 
 	@media (min-width: 1024px) {
@@ -75,8 +79,6 @@
         }
   
         @media (min-width: 768px) {
-          color: white;
-
           display: inline;
           margin-left: 20px;
           font-size: 1em;

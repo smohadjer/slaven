@@ -29,9 +29,15 @@
   }
 
   @media (min-width: 768px) {
-    color: white;
-    top: 108px;
     left: 35px;
+    margin-bottom: 0;
+    top: 10px;
+
+    .header--home & {
+      color: white;
+      top: 108px;
+      margin-bottom: 5px;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -125,6 +131,7 @@
 
     @media (min-width: 1024px) {
       font-size: 0.55em;
+      margin-top: -5px;
     }
   }
 }

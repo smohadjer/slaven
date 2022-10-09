@@ -6,12 +6,21 @@ footer {
 
   @media (min-width: 768px) {
     background: url(../img/footer.jpg) repeat-x;
+    background: $orange;
     color: white;
   }
 
+  clip-path: polygon(
+    0 0,
+    100% 50px,
+    100% 100%,
+    0 100%
+  );
+
   .footer__content {
     a {
-      color: #f2641d;
+      color: white;
+      text-decoration: underline;
     }
 
     .copyright {
@@ -26,12 +35,13 @@ footer {
     @media (min-width: 1024px) {
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
     }
   }
 
 	ul {
 		list-style: none;
-		margin: 0;
+		margin: 0 0 15px 0;
 		padding: 0;
 
 		li {

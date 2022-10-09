@@ -24,12 +24,22 @@
     margin: 0;
     padding: 0;
     //clip-path: none;
+
     clip-path: polygon(
-      0 0,
+      0 50px,
       100% 0,
-      100% 100%,
-      0 calc(100% - 50px)
+      100% calc(100% - 50px),
+      0 100%
     );
+
+    &--home {
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 calc(100% - 50px)
+      );
+    }
   }
 
   .bg {

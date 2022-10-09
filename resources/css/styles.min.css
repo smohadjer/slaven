@@ -847,12 +847,14 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
 }
 @media (min-width: 1024px) {
   .header nav ul li {
+    margin-left: 25px;
     font-size: 1.1em;
     font-weight: 500;
   }
 }
 @media (min-width: 1400px) {
   .header nav ul li {
+    margin-left: 30px;
     font-size: 1.25em;
     font-weight: 500;
   }
@@ -1029,14 +1031,8 @@ footer {
 }
 @media (min-width: 768px) {
   footer {
-    background: url(../img/footer.jpg) repeat-x;
-    background: #C64200;
-    color: white;
+    background: #eee;
   }
-}
-footer .footer__content a {
-  color: white;
-  text-decoration: underline;
 }
 footer .footer__content .copyright {
   margin-bottom: 0.5em;
@@ -1117,6 +1113,10 @@ a.external {
 h1, h2, h3, h4, p, ul, ol {
   margin-bottom: 0;
   margin-top: 1em;
+}
+
+article > h1:first-child {
+  margin-top: 0.5em;
 }
 
 h1 {
@@ -1220,7 +1220,7 @@ main > article {
     background: none;
     margin: 0;
     padding: 0;
-    clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 50px), 0 100%);
+    clip-path: polygon(0 45px, 100% 0, 100% 100%, 0 calc(100% - 45px));
   }
   .stage--home {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));

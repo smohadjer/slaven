@@ -5,9 +5,7 @@ footer {
   background: $yellow;
 
   @media (min-width: 768px) {
-    background: url(../img/footer.jpg) repeat-x;
-    background: $orange;
-    color: white;
+    background: $lightGray;
   }
 
   clip-path: polygon(
@@ -18,11 +16,6 @@ footer {
   );
 
   .footer__content {
-    a {
-      color: white;
-      text-decoration: underline;
-    }
-
     .copyright {
       margin-bottom: 0.5em;
       display: block;

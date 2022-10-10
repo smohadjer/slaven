@@ -1027,7 +1027,7 @@ footer {
   margin-top: 40px;
   font-size: 1rem;
   background: #F7AB01;
-  clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
+  clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
 }
 @media (min-width: 768px) {
   footer {
@@ -1040,6 +1040,7 @@ footer .footer__content .copyright {
 }
 footer .footer__content address {
   font-style: normal;
+  margin-top: 10px;
 }
 @media (min-width: 1024px) {
   footer .footer__content {

@@ -823,6 +823,9 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   color: black;
   font-weight: bold;
 }
+.header--home .header nav ul li {
+  color: white;
+}
 @media (max-width: 767px) {
   .header nav ul li {
     border-bottom: solid 1px #000;
@@ -858,6 +861,9 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
     font-size: 1.25em;
     font-weight: 500;
   }
+}
+.header--home nav ul li {
+  color: white;
 }
 
 .logo {
@@ -1114,6 +1120,10 @@ a.external {
 h1, h2, h3, h4, p, ul, ol {
   margin-bottom: 0;
   margin-top: 1em;
+}
+
+li > ul {
+  margin-top: 0;
 }
 
 article > h1:first-child {

@@ -35,6 +35,10 @@ h1, h2, h3, h4, p, ul, ol {
   margin-top: 1em;
 }
 
+li > ul {
+  margin-top: 0;
+}
+
 article > h1:first-child {
   margin-top: 0.5em;
 }

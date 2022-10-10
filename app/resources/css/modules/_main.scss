@@ -90,6 +90,14 @@ img.object-fit-cover {
   &.center {
     object-position: center;
   }
+
+  &.bottom {
+    object-position: bottom;
+  }
+
+  &.center-bottom {
+    object-position: 0 75%;
+  }
 }
 
 

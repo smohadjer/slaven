@@ -1176,6 +1176,12 @@ img.object-fit-cover {
 img.object-fit-cover.center {
   object-position: center;
 }
+img.object-fit-cover.bottom {
+  object-position: bottom;
+}
+img.object-fit-cover.center-bottom {
+  object-position: 0 75%;
+}
 
 main > article {
   padding: 0 15px;

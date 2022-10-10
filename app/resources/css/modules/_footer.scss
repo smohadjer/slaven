@@ -9,8 +9,8 @@ footer {
   }
 
   clip-path: polygon(
-    0 0,
-    100% 50px,
+    0 50px,
+    100% 0,
     100% 100%,
     0 100%
   );
@@ -23,6 +23,7 @@ footer {
 
     address {
       font-style: normal;
+      margin-top: 10px;
     }
 
     @media (min-width: 1024px) {

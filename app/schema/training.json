@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "age_group": {
+      "type": "string"
+    },
+    "email_subject": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "privacy": {
+      "type": "boolean"
+    },
+    "season": {
+      "type": "string"
+    },
+    "training_type": {
+      "type": "string"
+    },
+    "training_time": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "age_group",
+    "email_subject",
+    "first_name",
+    "last_name",
+    "address",
+    "city",
+    "postal_code",
+    "birthday",
+    "phone",
+    "email",
+    "privacy",
+    "type",
+    "training_type",
+    "training_time",
+    "year"
+  ]
+}

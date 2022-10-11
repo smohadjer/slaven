@@ -10,33 +10,36 @@
     <h1>Anmeldung zum Jugend-Sommertraining 2023</h1>
     <p>Die Anmeldung bis <strong>spätestens 15.03.2023</strong> an die unten stehende E-Mail senden.</p>
     <form method="post" action="https://tennis.deta.dev/tennis-form">
+      <!-- hidden fields start -->
       <span class="row hidden">
-        <label for="subject">Email subject</label>
-        <input hidden id="subject" name="subject" value="Anmeldung zum Jugend-Sommertraining 2023" />
+        <label for="email_subject">Email subject</label>
+        <input hidden id="email_subject" name="email_subject" value="Anmeldung zum Jugend-Sommertraining 2023" />
       </span>
       <span class="row hidden">
         <label for="year">Year</label>
         <input hidden id="year" name="year" value="2023" />
       </span>
       <span class="row hidden">
-        <label for="season">Season</label>
-        <input hidden id="season" name="season" value="summer" />
-      </span>
-      <span class="row hidden">
         <label for="type">Type</label>
         <input hidden id="type" name="type" value="training" />
+      </span>
+      <span class="row hidden">
+        <label for="season">Type</label>
+        <input hidden id="season" name="season" value="sommer" />
       </span>
       <span class="row hidden">
         <label for="age_group">Age group</label>
         <input hidden id="age_group" name="age_group" value="children" />
       </span>
+      <!-- hidden fields end -->
+
       <span class="row">
-        <label for="firstname">Vorname</label>
-        <input id="firstname" name="firstname" required />
+        <label for="first_name">Vorname</label>
+        <input id="first_name" name="first_name" required />
       </span>
       <span class="row">
-        <label for="lastname">Nachname</label>
-        <input id="lastname" name="lastname" required />
+        <label for="last_name">Nachname</label>
+        <input id="last_name" name="last_name" required />
       </span>
        <span class="row">
         <label for="address">Straße und Hausnr.</label>
@@ -47,8 +50,8 @@
         <input id="city" name="city" required />
       </span>
        <span class="row">
-        <label for="postalcode">Postleitzahl</label>
-        <input id="postalcode" name="postalcode" required />
+        <label for="postal_code">Postleitzahl</label>
+        <input id="postal_code" name="postal_code" required />
       </span>
        <span class="row">
         <label for="birthday">Geburtsdatum</label>
@@ -119,7 +122,7 @@
           </tr>
       </table>
       <p>
-        <input type="checkbox" id="privacy" name="privacy" value="privacy" required />
+        <input type="checkbox" id="privacy" name="privacy" value="true" required />
         <label for="privacy">Ich stimme den <a href="privacy.html" target="_blank">Datenschutzbestimmungen</a> zu.</label>
       </p>
       <button>Absenden</button>

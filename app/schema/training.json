@@ -3,7 +3,8 @@
   "type": "object",
   "properties": {
     "age_group": {
-      "type": "string"
+      "type": "string",
+      "description": "Possible values are: kinder and erwachsene"
     },
     "email_subject": {
       "type": "string"
@@ -36,7 +37,8 @@
       "type": "boolean"
     },
     "season": {
-      "type": "string"
+      "type": "string",
+      "description": "Possible values are: fruehling, sommer, herbst, and winter"
     },
     "training_type": {
       "type": "string"
@@ -45,7 +47,8 @@
       "type": "string"
     },
     "type": {
-      "type": "string"
+      "type": "string",
+      "description": "Possible values are training and camp"
     },
     "year": {
       "type": "integer"

@@ -23,13 +23,14 @@ header .hamburger {
 	}
 
   .hamburger-box {
-    width: 32px;
+    width: 30px;
   }
 
   .hamburger-inner, 
   .hamburger-inner::before, 
   .hamburger-inner::after {
-    width: 32px;
+    width: 30px;
+		height: 3px;
 		background-color: black;
   }
 }

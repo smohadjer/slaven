@@ -1,22 +1,14 @@
 Phase 1
-- Homepage
-- Training
-    - Overview
-    - Registration
-    - Listing (visible only to Slaven)
-- Tenniscamp
-    - Overview
-    - Registration Kids
-- Team
-- About
-- Contact
-- Privacy
-- Imprint 
+- Home
+- Training landing page (info about training courses with link to registration page)
+- Training registration pages (adult and kids)
+- Tenniscamp landing page (info about camps, links to existing camp pages, teaser with registration link to next camp)
+- Tenniscamp details page (info about camp, photo gallery, and registration form if camp is in future)
+- Über mich
+- Datenschutz
+- Impressum 
 
 Phase 2
+- Team
 - Jobs
-- Tenniscamp
-    - Registration Adults
-- Customer registration to facilitate registration for future training courses or camps
-- Trainees page (where Slaven can see list of all his trainees and can write notes)
 - Newsletter subscription

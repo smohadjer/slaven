@@ -1,16 +1,25 @@
+from datetime import datetime
+
+
 from pydantic import BaseModel, EmailStr
 
 
 class FormData(BaseModel):
-    firstname: str
-    lastname: str
+    first_name: str
+    last_name: str
     address: str
     city: str
-    postalcode: str
-    birthday: str
+    postal_code: str
+    birthday: datetime
     phone: str
     email: EmailStr
     training_type: list[str]
     training_time: list[str]
-    privacy: str
+    privacy: bool
+    year: int
+    season: str
+
+
+class FormEvent(FormData):
+    timestamp: datetime = datetime.utcnow()
 

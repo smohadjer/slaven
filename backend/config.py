@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     MAIL_USERNAME: str
     MAIL_PASSWORD: str
     MAIL_FROM: str
+    MONGO_URI: str
+    DB_NAME: str
+    registration_collection: str = "Registration"
 
 # specify .env file location as Config attribute
     class Config:
@@ -39,11 +42,11 @@ def get_template(resp: FormData, formatted_training_types, _training_times):
            <table>
           <tr valign="top">
             <td>Vorname:</td>
-            <td>{resp.firstname}</td>
+            <td>{resp.first_name}</td>
           </tr>
                 <tr>
             <td>Nachname:</td>
-            <td>{resp.lastname}</td>
+            <td>{resp.last_name}</td>
           </tr>
           <tr valign="top">
             <td>Straße und Hausnr:</td>
@@ -55,7 +58,7 @@ def get_template(resp: FormData, formatted_training_types, _training_times):
           </tr>
           <tr valign="top">
             <td>Postleitzahl:</td>
-            <td>{resp.postalcode}</td>
+            <td>{resp.postal_code}</td>
           </tr>
           <tr valign="top">
             <td>Geburtsdatum:</td>

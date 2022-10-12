@@ -1012,6 +1012,9 @@ footer .footer__content address {
     align-items: flex-end;
   }
 }
+footer .footer__content a {
+  font-weight: 500;
+}
 footer ul {
   list-style: none;
   margin: 0 0 15px;

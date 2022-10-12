@@ -993,6 +993,7 @@ footer {
   padding: 60px 15px 20px;
   font-size: 1rem;
   background: #eee;
+  margin-top: 20px;
   clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
 }
 @media (min-width: 768px) {
@@ -1212,9 +1213,14 @@ main > article {
     padding: 0;
     width: 100%;
     clip-path: polygon(0 45px, 100% 0, 100% 100%, 0 calc(100% - 45px));
-  }
-  .stage--home {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+    /*&--home {
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 calc(100% - 50px)
+      );
+    }*/
   }
 }
 .stage .bg {
@@ -1243,7 +1249,7 @@ main > article {
 }
 @media (min-width: 768px) {
   .stage--home .bg {
-    clip-path: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 45px));
   }
 }
 .stage--home .teaser-wrapper .teaser {

@@ -11,6 +11,6 @@ async def register_camp(request: Request):
     return await Tennis.registration(request)
 
 
-@router.post("/saeid", response_model=FormData)
-async def saeid(body: FormData):
+@router.post("/schema", response_model=FormData)
+async def form_schema(body: FormData):
     return body

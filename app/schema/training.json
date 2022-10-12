@@ -51,7 +51,8 @@
       "description": "Possible values are training and camp"
     },
     "year": {
-      "type": "integer"
+      "type": "integer",
+      "minimum": "2022"
     }
   },
   "required": [

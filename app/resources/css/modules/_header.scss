@@ -7,31 +7,26 @@
   flex-wrap: wrap;
   font-family: Quicksand, arial, verdana, sans-serif;
   width: 100%;
-  padding: 5px 10px 0;
+  padding: 0 15px 0;
   box-sizing: border-box;
-  background: $yellow;
+  //background: $yellow;
   //background: linear-gradient(to bottom, $yellow 10%, #fff 100%);
 
   @media (min-width: 768px) {
+    padding: 0 20px 0;
+
     &--home {
       position: absolute;
       z-index: 10;
       background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
       min-height: 150px;
     }
-
-    background: white;
   }
-
-	@media (min-width: 1024px) {
-    margin: 0;
-    padding: 0;
-	}  
 
   nav {
     font-weight: 500;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: 0;
 
     @media (max-width: 767px) {
       flex: 0 0 100%;
@@ -61,12 +56,9 @@
 
       li {
         line-height: 1.5;
-        color: black;
+        color: #444;
         font-weight: bold;
-
-        .header--home & {
-          color: white;
-        }
+        font-size: 18px;
   
         @media (max-width: 767px) {
           border-bottom: solid 1px #000;
@@ -84,29 +76,31 @@
         @media (min-width: 768px) {
           display: inline;
           margin-left: 20px;
-          font-size: 1em;
   
           &:first-child {
             margin-left: 0;
           }
         }
 
+        
         @media (min-width: 1024px) {
-          margin-left: 25px;
-          font-size: 1.1em;
-          font-weight: 500;
+          font-size: 1.25em;
         }
 
+        /*
         @media (min-width: 1400px) {
           margin-left: 30px;
           font-size: 1.25em;
           font-weight: 500;
         }
+        */
       }
     }
   }
   
   &--home nav ul li {
-    color: white;
+    @media (min-width: 768px) {
+      color: white;
+    }
   }
 }

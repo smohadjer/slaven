@@ -1,11 +1,10 @@
 footer {
-  padding: 20px;
-	margin-top: 40px;
+  padding: 60px 20px 20px;
   font-size: 1rem;
-  background: $yellow;
+  background: $lightGray;
 
   @media (min-width: 768px) {
-    background: $lightGray;
+    padding-top: 20px;
   }
 
   clip-path: polygon(
@@ -16,17 +15,12 @@ footer {
   );
 
   .footer__content {
-    .copyright {
-      margin-bottom: 0.5em;
-      display: block;
-    }
-
     address {
       font-style: normal;
       margin-top: 10px;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -35,15 +29,23 @@ footer {
 
 	ul {
 		list-style: none;
-		margin: 0 0 15px 0;
+		margin: 0 0 15px;
 		padding: 0;
 
-		li {
-			display: inline;
-			margin-right: 10px;
+    @media (min-width: 768px) {
+      margin: 0;
+    }
 
-      &:last-child {
-        margin-right: 0;
+		li {
+      margin-top: 3px;
+
+      @media (min-width: 768px) {
+        display: inline;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 		}
 	}

@@ -1481,6 +1481,7 @@ form .row.hidden {
 form .row label {
   display: inline-block;
   min-width: 200px;
+  vertical-align: top;
 }
 form .row input {
   width: 100%;

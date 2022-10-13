@@ -4,7 +4,10 @@
   "properties": {
     "age_group": {
       "type": "string",
-      "description": "Possible values are: kinder and erwachsene"
+      "enum": ["kinder", "erwachsene"]
+    },
+    "comments": {
+      "type": "string"
     },
     "email_subject": {
       "type": "string"
@@ -38,7 +41,7 @@
     },
     "season": {
       "type": "string",
-      "description": "Possible values are: fruehling, sommer, herbst, and winter"
+      "enum": ["fruehling", "sommer", "herbst", "winter"]
     },
     "training_type": {
       "type": "string"
@@ -48,11 +51,11 @@
     },
     "type": {
       "type": "string",
-      "description": "Possible values are training and camp"
+      "enum": ["training", "camp"]
     },
     "year": {
       "type": "integer",
-      "minimum": "2022"
+      "minimum": 2022
     }
   },
   "required": [

@@ -5,6 +5,11 @@
     cursor: pointer;
     padding: 0.5em 0;
     font-weight: bold;
+
+    h2 {
+      display: inline-block;
+      margin: 0;
+    }
   }
 
   &__content {

@@ -38,21 +38,6 @@ ready(function() {
 		});
 	}
 
-	//example of using a handlebars template/partial
-	Handlebars.registerPartial('myPartial', myApp.templates.myPartial);
-	var template = myApp.templates.helloWorld;
-	var html = template({
-		'title': 'Example of markup generated via js using handlebars',
-		'subtitle': 'This text comes from a hbs partial!'
-	});
-	var aside = document.querySelector('aside') || document.querySelector('.handlebars');
-
-	if (aside) {
-		aside.innerHTML = html;
-	} else {
-		console.log('aside not found!');
-	}
-
 	//initialize accordions
 	document.querySelectorAll('.accordion').forEach((el) => {
 		new Accordion(el);

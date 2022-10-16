@@ -1251,16 +1251,6 @@ main > article aside ul li a {
   /* fix chrome bug showing a thin white line in responsive mode */
   background-color: #eee;
   clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%);
-  /*
-  @media (min-width: 1200px) {
-    clip-path: polygon(
-      0 50px,
-      100% 0,
-      100% calc(100% - 50px),
-      0 100%
-    );
-  }
-  */
   /****** stage on homepage *****/
 }
 @media (min-width: 768px) {
@@ -1269,14 +1259,6 @@ main > article aside ul li a {
     padding: 0;
     width: 100%;
     clip-path: polygon(0 45px, 100% 0, 100% 100%, 0 calc(100% - 45px));
-    /*&--home {
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% 100%,
-        0 calc(100% - 50px)
-      );
-    }*/
   }
 }
 .stage .bg {
@@ -1307,13 +1289,6 @@ main > article aside ul li a {
   .stage--home .bg {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 45px));
   }
-}
-.stage--home .teaser-wrapper .teaser {
-  margin: 0 15px 20px;
-  border-bottom: solid 1px #ccc;
-}
-.stage--home .teaser-wrapper .teaser .button {
-  margin-top: -25px;
 }
 @media (min-width: 768px) {
   .stage--home .teaser-wrapper {
@@ -1353,21 +1328,19 @@ main > article aside ul li a {
   font-display: swap;
 }
 .teaser {
-  padding: 15px 0 20px;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+  padding: 15px 15px 20px;
   position: relative;
   animation-duration: 0.8s;
   animation-name: slideinTeaser;
   animation-fill-mode: both;
   animation-delay: 0.5s;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .teaser {
     padding-bottom: 15px;
     margin-bottom: 15px;
-    border-bottom: 0;
-    display: flex;
-    flex-direction: column;
     flex-wrap: nowrap;
   }
 }
@@ -1384,26 +1357,9 @@ main > article aside ul li a {
     opacity: 1;
   }
 }
-.teaser:last-child {
-  border: 0;
-  margin-bottom: 0;
-}
-.teaser:last-child h2 {
-  margin-top: 0px;
-}
-.teaser h2 {
-  font-size: 22px;
-  margin-top: 30px;
-  /*
-  @media (min-width: 1300px) {
-    font-size: 35px;   
-  }
-  */
-}
 @media (min-width: 768px) {
   .teaser h2 {
     font-size: 30px;
-    order: 1;
     color: #F7AB01;
   }
 }
@@ -1411,16 +1367,10 @@ main > article aside ul li a {
   margin-top: 10px;
   font-size: 18px;
   line-height: 1.5;
-  /*
-  @media (min-width: 1300px) {
-    font-size: 25px;
-  }
-  */
 }
 @media (min-width: 768px) {
   .teaser p {
     font-size: 20px;
-    order: 2;
     margin-top: 0;
   }
 }
@@ -1432,26 +1382,17 @@ main > article aside ul li a {
   padding-left: 13px;
   margin-left: 10px;
 }
-.teaser .button {
-  position: absolute;
-  right: 0;
-  top: -20px;
-}
-@media (min-width: 768px) {
-  .teaser .button {
-    position: static;
-    order: 3;
-    margin-top: 20px;
-  }
-}
 .teaser .button a {
   background-color: #C64200;
-  padding: 10px 15px;
+  padding: 8px 10px;
   font-weight: bold;
   font-size: 18px;
-  display: inline-block;
   color: white;
   text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  max-width: 215px;
 }
 @media (min-width: 768px) {
   .teaser .button a {

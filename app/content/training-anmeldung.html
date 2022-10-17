@@ -6,131 +6,140 @@
         alt="" />
     </div>
   </div>
-  <article id="form">
-    <h1>Anmeldung zum Sommertraining 2023 für Erwachsene</h1>
-    <p>Anmeldungsfrist: <strong>15.03.2023</strong><br />
-    Die Felder markiert mit <strong>*</strong> sind Pflichtfelder.</p>
-    <form method="post" action="https://tennis.deta.dev/tennis-form">
-      <!-- hidden fields start -->
-      <div class="row hidden">
-        <label for="email_subject">Email subject</label>
-        <input hidden id="email_subject" name="email_subject" value="Anmeldung zum Sommertraining 2023 für Erwachsene" />
-      </div>
-      <div class="row hidden">
-        <label for="year">Year</label>
-        <input hidden id="year" name="year" value="2023" />
-      </div>
-      <div class="row hidden">
-        <label for="type">Type</label>
-        <input hidden id="type" name="type" value="training" />
-      </div>
-      <div class="row hidden">
-        <label for="season">Type</label>
-        <input hidden id="season" name="season" value="sommer" />
-      </div>
-      <div class="row hidden">
-        <label for="age_group">Age group</label>
-        <input hidden id="age_group" name="age_group" value="erwachsene" />
-      </div>
-      <!-- hidden fields end -->
-
-      <div class="row row--two-columns required">
-        <label for="first_name">Vorname</label>
-        <input id="first_name" name="first_name" required />
-      </div>
-      <div class="row row--two-columns required">
-        <label for="last_name">Nachname</label>
-        <input id="last_name" name="last_name" required />
-      </div>
-       <div class="row row--two-columns required">
-        <label for="address">Straße und Hausnr.</label>
-        <input id="address" name="address" required />
-      </div>
-       <div class="row row--two-columns required">
-        <label for="city">Stadt</label>
-        <input id="city" name="city" />
-      </div>
-       <div class="row row--two-columns required">
-        <label for="postal_code">Postleitzahl</label>
-        <input id="postal_code" name="postal_code" required />
-      </div>
-       <div class="row row--two-columns required">
-        <label for="birthday">Geburtsdatum</label>
-        <input id="birthday" name="birthday" type="date" required />
-      </div>
-       <div class="row row--two-columns required">
-        <label for="phone">Telefonnummer</label>
-        <input id="phone" name="phone" type="tel" required />
-      </div>
-       <div class="row row--two-columns required">
-        <label for="email">E-Mail</label>
-        <input id="email" name="email" type="email" required />
-      </div>
-      <div class="row required">
-        <p>Bitte wählen Sie Ihren Trainingsort:</p>
-        <span class="column">
-          <input type="radio" id="training_ort1" name="training_ort" value="zaehringen" required />
-          <label for="training_ort1">TSV Alemannia Freiburg - Zähringen e.V.</label>
-        </span>
-        <span class="column">
-          <input type="radio" id="training_ort2" name="training_ort" value="umkirch" required />
-          <label for="training_ort2">Tennisclub Umkirch e.V.</label>
-        </span>
-      </div>
-      <div class="row required">
-        <p>Bitte wählen Sie alle möglichen Trainingszeiten aus, dass bei der Einteilung der Gruppen insbesondere bei Wunschpartnern ein Planungsspielraum besteht.</p>
-        <div class="table-wrapper">
-          <table>
-            <tr>
-              <th>Mo.</th>
-              <th>Di.</th>
-              <th>Mi.</th>
-              <th>Do.</th>
-              <th>Fr.</th>
-            </tr>
-            <tr>
-              <td><input type="checkbox" id="monday_17" name="training_time" value="Montag, 17-18 Uhr"/><label for="monday_17">17-18</label></td>
-              <td><input type="checkbox" id="tuesday_17" name="training_time" value="Dienstag, 17-18 Uhr" /><label for="tuesday_17">17-18</label></td>
-              <td><input type="checkbox" id="wednesday_17" name="training_time" value="Mittwoch, 17-18 Uhr" /><label for="wednesday_17">17-18</label></td>
-              <td><input type="checkbox" id="thursday_17" name="training_time" value="Donnerstag, 17-18 Uhr" /><label for="thursday_17">17-18</label></td>
-              <td><input type="checkbox" id="friday_17" name="training_time" value="Freitag, 17-18 Uhr" /><label for="friday_17">17-18</label></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" id="monday_18" name="training_time" value="Montag, 18-19 Uhr"/><label for="monday_18">18-19</label></td>
-              <td><input type="checkbox" id="tuesday_18" name="training_time" value="Dienstag, 18-19 Uhr" /><label for="tuesday_18">18-19</label></td>
-              <td><input type="checkbox" id="wednesday_18" name="training_time" value="Mittwoch, 18-19 Uhr" /><label for="wednesday_18">18-19</label></td>
-              <td><input type="checkbox" id="thursday_18" name="training_time" value="Donnerstag, 18-19 Uhr" /><label for="thursday_18">18-19</label></td>
-              <td><input type="checkbox" id="friday_18" name="training_time" value="Freitag, 18-19 Uhr" /><label for="friday_18">18-19</label></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" id="monday-19" name="training_time" value="Montag, 19-20 Uhr"/><label for="monday-19">19-20</label></td>
-              <td><input type="checkbox" id="tuesday-19" name="training_time" value="Dienstag, 19-20 Uhr" /><label for="tuesday-19">19-20</label></td>
-              <td><input type="checkbox" id="wednesday-19" name="training_time" value="Mittwoch, 19-20 Uhr" /><label for="wednesday-19">19-20</label></td>
-              <td><input type="checkbox" id="thursday-19" name="training_time" value="Donnerstag, 19-20 Uhr" /><label for="thursday-19">19-20</label></td>
-              <td><input type="checkbox" id="friday-19" name="training_time" value="Freitag, 19-20 Uhr" /><label for="friday-19">19-20</label></td>
-            </tr>
-            <tr>
-              <td><input type="checkbox" id="monday_20" name="training_time" value="Montag, 20-21 Uhr"/><label for="monday_20">20-21</label></td>
-              <td><input type="checkbox" id="tuesday_20" name="training_time" value="Dienstag, 20-21 Uhr" /><label for="tuesday_20">20-21</label></td>
-              <td><input type="checkbox" id="wednesday_20" name="training_time" value="Mittwoch, 20-21 Uhr" /><label for="wednesday_20">20-21</label></td>
-              <td><input type="checkbox" id="thursday_20" name="training_time" value="Donnerstag, 20-21 Uhr" /><label for="thursday_20">20-21</label></td>
-              <td><input type="checkbox" id="friday_20" name="training_time" value="Freitag, 20-21 Uhr" /><label for="friday_20">20-21</label></td>
-            </tr>
-          </table>
+  <article id="form" class="has-aside">
+    <aside>
+      <h3>Anmeldung 2023</h3>
+      <ul>
+        <li><a href="training-anmeldung-jugend.html">Sommertraining für Jugend</a></li>
+        <li><a href="training-anmeldung.html">Sommertraining für Erwachsene</a></li>
+      </ul>
+    </aside>
+    <div>
+      <h1>Anmeldung zum Sommertraining 2023 für Erwachsene</h1>
+      <p>Anmeldungsfrist: <strong>15.03.2023</strong><br />
+      Die Felder markiert mit <strong>*</strong> sind Pflichtfelder.</p>
+      <form method="post" action="https://tennis.deta.dev/tennis-form">
+        <!-- hidden fields start -->
+        <div class="row hidden">
+          <label for="email_subject">Email subject</label>
+          <input hidden id="email_subject" name="email_subject" value="Anmeldung zum Sommertraining 2023 für Erwachsene" />
         </div>
+        <div class="row hidden">
+          <label for="year">Year</label>
+          <input hidden id="year" name="year" value="2023" />
+        </div>
+        <div class="row hidden">
+          <label for="type">Type</label>
+          <input hidden id="type" name="type" value="training" />
+        </div>
+        <div class="row hidden">
+          <label for="season">Type</label>
+          <input hidden id="season" name="season" value="sommer" />
+        </div>
+        <div class="row hidden">
+          <label for="age_group">Age group</label>
+          <input hidden id="age_group" name="age_group" value="erwachsene" />
+        </div>
+        <!-- hidden fields end -->
+  
+        <div class="row row--two-columns required">
+          <label for="first_name">Vorname</label>
+          <input id="first_name" name="first_name" required />
+        </div>
+        <div class="row row--two-columns required">
+          <label for="last_name">Nachname</label>
+          <input id="last_name" name="last_name" required />
+        </div>
+         <div class="row row--two-columns required">
+          <label for="address">Straße und Hausnr.</label>
+          <input id="address" name="address" required />
+        </div>
+         <div class="row row--two-columns required">
+          <label for="city">Stadt</label>
+          <input id="city" name="city" />
+        </div>
+         <div class="row row--two-columns required">
+          <label for="postal_code">Postleitzahl</label>
+          <input id="postal_code" name="postal_code" required />
+        </div>
+         <div class="row row--two-columns required">
+          <label for="birthday">Geburtsdatum</label>
+          <input id="birthday" name="birthday" type="date" required />
+        </div>
+         <div class="row row--two-columns required">
+          <label for="phone">Telefonnummer</label>
+          <input id="phone" name="phone" type="tel" required />
+        </div>
+         <div class="row row--two-columns required">
+          <label for="email">E-Mail</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="row required">
+          <p>Bitte wählen Sie Ihren Trainingsort:</p>
+          <span class="column">
+            <input type="radio" id="training_ort1" name="training_ort" value="zaehringen" required />
+            <label for="training_ort1">TSV Alemannia Freiburg - Zähringen e.V.</label>
+          </span>
+          <span class="column">
+            <input type="radio" id="training_ort2" name="training_ort" value="umkirch" required />
+            <label for="training_ort2">Tennisclub Umkirch e.V.</label>
+          </span>
+        </div>
+        <div class="row required">
+          <p>Bitte wählen Sie alle möglichen Trainingszeiten aus, dass bei der Einteilung der Gruppen insbesondere bei Wunschpartnern ein Planungsspielraum besteht.</p>
+          <div class="table-wrapper">
+            <table>
+              <tr>
+                <th>Mo.</th>
+                <th>Di.</th>
+                <th>Mi.</th>
+                <th>Do.</th>
+                <th>Fr.</th>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="monday_17" name="training_time" value="Montag, 17-18 Uhr"/><label for="monday_17">17-18</label></td>
+                <td><input type="checkbox" id="tuesday_17" name="training_time" value="Dienstag, 17-18 Uhr" /><label for="tuesday_17">17-18</label></td>
+                <td><input type="checkbox" id="wednesday_17" name="training_time" value="Mittwoch, 17-18 Uhr" /><label for="wednesday_17">17-18</label></td>
+                <td><input type="checkbox" id="thursday_17" name="training_time" value="Donnerstag, 17-18 Uhr" /><label for="thursday_17">17-18</label></td>
+                <td><input type="checkbox" id="friday_17" name="training_time" value="Freitag, 17-18 Uhr" /><label for="friday_17">17-18</label></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="monday_18" name="training_time" value="Montag, 18-19 Uhr"/><label for="monday_18">18-19</label></td>
+                <td><input type="checkbox" id="tuesday_18" name="training_time" value="Dienstag, 18-19 Uhr" /><label for="tuesday_18">18-19</label></td>
+                <td><input type="checkbox" id="wednesday_18" name="training_time" value="Mittwoch, 18-19 Uhr" /><label for="wednesday_18">18-19</label></td>
+                <td><input type="checkbox" id="thursday_18" name="training_time" value="Donnerstag, 18-19 Uhr" /><label for="thursday_18">18-19</label></td>
+                <td><input type="checkbox" id="friday_18" name="training_time" value="Freitag, 18-19 Uhr" /><label for="friday_18">18-19</label></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="monday-19" name="training_time" value="Montag, 19-20 Uhr"/><label for="monday-19">19-20</label></td>
+                <td><input type="checkbox" id="tuesday-19" name="training_time" value="Dienstag, 19-20 Uhr" /><label for="tuesday-19">19-20</label></td>
+                <td><input type="checkbox" id="wednesday-19" name="training_time" value="Mittwoch, 19-20 Uhr" /><label for="wednesday-19">19-20</label></td>
+                <td><input type="checkbox" id="thursday-19" name="training_time" value="Donnerstag, 19-20 Uhr" /><label for="thursday-19">19-20</label></td>
+                <td><input type="checkbox" id="friday-19" name="training_time" value="Freitag, 19-20 Uhr" /><label for="friday-19">19-20</label></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="monday_20" name="training_time" value="Montag, 20-21 Uhr"/><label for="monday_20">20-21</label></td>
+                <td><input type="checkbox" id="tuesday_20" name="training_time" value="Dienstag, 20-21 Uhr" /><label for="tuesday_20">20-21</label></td>
+                <td><input type="checkbox" id="wednesday_20" name="training_time" value="Mittwoch, 20-21 Uhr" /><label for="wednesday_20">20-21</label></td>
+                <td><input type="checkbox" id="thursday_20" name="training_time" value="Donnerstag, 20-21 Uhr" /><label for="thursday_20">20-21</label></td>
+                <td><input type="checkbox" id="friday_20" name="training_time" value="Freitag, 20-21 Uhr" /><label for="friday_20">20-21</label></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <label for="comments">Weitere Hinweise</label>
+          <textarea id="comments" name="comments" rows="8" cols="50"></textarea>
+        </div>
+        <div class="row required">
+          <input type="checkbox" id="privacy" name="privacy" value="true" required />
+          <label for="privacy">Ich stimme den <a href="privacy.html" target="_blank">Datenschutzbestimmungen</a> zu.</label>
+        </div>
+        <button>Absenden</button>
+      </form>
+      <div id="confirmation" hidden>
+        <h2>Your data was successfully submited and you would receive a confirmation Email soon. Thank you.</h2>
       </div>
-      <div class="row">
-        <label for="comments">Weitere Hinweise</label>
-        <textarea id="comments" name="comments" rows="8" cols="50"></textarea>
-      </div>
-      <div class="row required">
-        <input type="checkbox" id="privacy" name="privacy" value="true" required />
-        <label for="privacy">Ich stimme den <a href="privacy.html" target="_blank">Datenschutzbestimmungen</a> zu.</label>
-      </div>
-      <button>Absenden</button>
-    </form>
-    <div id="confirmation" hidden>
-      <h2>Your data was successfully submited and you would receive a confirmation Email soon. Thank you.</h2>
     </div>
   </article>
 </main>

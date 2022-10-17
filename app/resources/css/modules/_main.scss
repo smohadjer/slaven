@@ -173,6 +173,7 @@ main > article {
   &.has-aside {
     @media (min-width: 768px) {
       display: flex;
+      align-items: flex-start;
     }
   }
 

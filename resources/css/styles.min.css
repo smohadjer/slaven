@@ -1225,6 +1225,7 @@ main > article aside ul li a {
 @media (min-width: 768px) {
   main > article.has-aside {
     display: flex;
+    align-items: flex-start;
   }
 }
 

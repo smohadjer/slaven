@@ -68,7 +68,6 @@
     "address",
     "city",
     "postal_code",
-    "birthday",
     "phone",
     "email",
     "privacy",

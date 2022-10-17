@@ -19,6 +19,9 @@
     "last_name": {
       "type": "string"
     },
+    "name_parent": {
+      "type": "string"
+    },
     "address": {
       "type": "string"
     },
@@ -74,6 +77,7 @@
     "birthday",
     "phone",
     "email",
+    "name_parent",
     "privacy",
     "type",
     "training_location",

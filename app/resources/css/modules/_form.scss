@@ -16,6 +16,7 @@ form {
   table {
     width: 100%;
     margin: 10px 0 20px;
+    border-spacing: 1px;
 
     th {
       background: #ccc;
@@ -30,7 +31,11 @@ form {
     }
     
     td {
-      padding: 10px 5px;
+      padding: 10px 0 10px 5px;
+
+      input[type=checkbox] {
+        margin-right: 2px;
+      }
 
       @media (min-width: 768px) {
         padding: 10px 30px 10px 10px;
@@ -38,10 +43,10 @@ form {
         label::after {
           content: " Uhr";
         }
-      }
 
-      &:first-child {
-        font-weight: 500;
+        input[type=checkbox] {
+          margin-right: 5px;
+        }
       }
     }
   }

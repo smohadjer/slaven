@@ -1421,7 +1421,10 @@ main > article aside ul li a {
   padding: 0.5em 0;
   font-weight: bold;
   color: #C64200;
-  list-style: none;
+  list-style-type: none;
+}
+.accordion summary::-webkit-details-marker {
+  display: none;
 }
 .accordion summary::before {
   content: "";

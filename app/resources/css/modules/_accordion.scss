@@ -16,6 +16,11 @@
       display:none;
     }
 
+    > * {
+      display: inline; /* so that block level elements don't wrap below marker when there is not enough space */
+      margin: 0;
+    }
+
     &::before {
       content: "";
       background: url(../img/down.svg) no-repeat;
@@ -26,11 +31,6 @@
       display: inline-block;
       vertical-align: text-bottom;
       margin-right: 5px;
-    }
-
-    h2 {
-      display: inline-block;
-      margin: 0;
     }
   }
 

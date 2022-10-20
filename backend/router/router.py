@@ -9,11 +9,12 @@ router = APIRouter(tags=["Main Router"])
 
 
 @router.post("/tennis-form")
-async def register_camp(request: Request, b_task: BackgroundTasks):
-    referer = request.headers.get("referer")
-    await Tennis.registration(request, b_task)
-    return RedirectResponse(url=referer + "slaven/training-anmeldung.html#confirmed",
-                            status_code=status.HTTP_303_SEE_OTHER)
+async def register_camp(request: Request):
+    # referer = request.headers.get("referer")
+    # await Tennis.registration(request, b_task)
+    # return RedirectResponse(url=referer + "slaven/training-anmeldung.html#confirmed",
+    #                         status_code=status.HTTP_303_SEE_OTHER)
+    return await Tennis.registration(request)
 
 
 @router.post("/schema", response_model=FormTrainingChildren)

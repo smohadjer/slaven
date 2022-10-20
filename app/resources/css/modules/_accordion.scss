@@ -10,7 +10,11 @@
     padding: 0.5em 0;
     font-weight: bold;
     color: $orange;
-    list-style: none;
+    list-style-type: none;
+
+    &::-webkit-details-marker {
+      display:none;
+    }
 
     &::before {
       content: "";

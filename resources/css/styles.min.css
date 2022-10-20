@@ -1406,14 +1406,33 @@ main > article aside ul li a {
 .accordion {
   border-bottom: solid 1px #ccc;
 }
+.accordion:last-child {
+  border: 0;
+}
 .accordion summary {
   cursor: pointer;
   padding: 0.5em 0;
   font-weight: bold;
+  color: #C64200;
+  list-style: none;
+}
+.accordion summary::before {
+  content: "";
+  background: url(../img/down.svg) no-repeat;
+  background-size: 22px;
+  background-position: center center;
+  width: 22px;
+  height: 23px;
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-right: 5px;
 }
 .accordion summary h2 {
   display: inline-block;
   margin: 0;
+}
+.accordion[open] summary::before {
+  background-image: url(../img/up.svg);
 }
 .accordion__content {
   padding-bottom: 1em;
@@ -1529,4 +1548,8 @@ form .row textarea {
   form .row textarea {
     max-width: 650px;
   }
+}
+
+#confirmation {
+  margin-top: 2em;
 }

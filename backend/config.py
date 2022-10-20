@@ -119,7 +119,7 @@ def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrain
     if type(resp) == FormTrainingAdult or type(resp) == FormTrainingChildren:
         template += f"""
                     <tr valign="top">
-                        <td>Trainingort:</td>
+                        <td>Trainingsort:</td>
                         <td>{resp.location}</td>
                     </tr>
                     """

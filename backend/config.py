@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 import logging
 
 from fastapi_mail import ConnectionConfig
@@ -38,7 +38,7 @@ conf = ConnectionConfig(
 )
 
 
-def get_html_template(resp: FormTrainingAdult | FormCampChildren | FormTrainingChildren,
+def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrainingChildren],
                       children: bool,
                       formatted_training_types: Optional[str] = None, _training_times: Optional[str] = None):
     template = f"""

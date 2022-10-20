@@ -1,0 +1,177 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Slaven Gluščević</title>
+    <meta name="description" content="Boilerplate for responsvie Websites"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="resources/css/styles.min.css">
+	<body>
+		<header class="header">
+		  <div class="logo">
+		    <span class="name">Slaven Gluščević</span>
+		    <div class="tagline">
+		      <span>T</span><span>e</span><span>n</span><span>n</span><span>i</span><span>s</span><span>t</span><span>r</span><span>a</span><span>i</span><span>n</span><span>e</span><span>r</span>
+		    </div>
+		  </div>
+		
+		  <!-- for mobile navigation -->
+		  <button class="hamburger hamburger--spin" type="button">
+		      <span class="hamburger-box">
+		          <span class="hamburger-inner"></span>
+		      </span>
+		      <!--<span class="hamburger-label">Menu</span>-->
+		  </button>
+		  <nav data-set-max-height="true">
+		    <ul>
+		      <li><a href="index.html">Home</a></li>
+		      <li><a href="training.html">Training</a></li>
+		      <li>Tenniscamp</a></li>
+		      <!--<li><a href="team.html">Team</a></li>-->
+		      <li><a href="ueber-mich.html">Über mich</a></li>
+		      <!--<li><a href="jobs.html">Jobs</a></li>-->
+		    </ul>
+		  </nav>
+		</header>
+    <main>
+      <div class="stage internal">
+        <div class="bg">
+          <img class="responsive object-fit-cover"
+            src="assets/image01.jpeg"
+            alt="" />
+        </div>
+      </div>
+      <article id="form" class="has-aside">
+        <aside>
+          <h3>Tenniscamp</h3>
+          <ul>
+            <li><a href="camp.html">Overview</a></li>
+            <li>TSV Sommer Camp</li>
+          </ul>
+        </aside>
+        <div>
+          <h1>TSV Sommer Camp</h1>
+          <h2>Hast du Freude am Tennis spielen? Dann komm jetzt auch während den Ferien zu uns!</h2>
+          <table class="meta-data">
+            <tr><td>Termin</td><td>01.08.2023 - 05.08.2023</td></tr>
+            <tr><td>Tägliche Trainingszeiten</td><td>09:00 - 16:00 Uhr</td></tr>
+            <tr><td>Preis pro Person</td><td>225,- €</td></tr>
+            <tr><td>Anmeldungsfrist</td><td>14.07.2023</td></tr>
+          </table>
+          <p>In unserem Ferientenniscamp 2022 kannst du (im Alter zwischen 6 und 18 Jahren) fünf tennisreiche Sporttage mit Spielen und viel Spaß erleben. Es erwarten dich täglich Tennis-Trainingseinheiten mit wechselnden spezifischen Schwerpunkten wie z.B. Schlagtraining, taktische Ansätze, Koordination, Spielformen und Punktespiel.</p>
+          <p>Die tägliche Tennis-Trainingseinheit beinhaltet: Ein gemeinsames Beginnen zum Aufwärmen mit Spielen, Tennistraining mit den Schwerpunkten Technik und Taktik und auch Koordinations- Kraft- und Ausdauertraining. Nach der Mittagspause mit warmen Essen geht es mit Tennistraining (Schwerpunkt Spielformen) weiter. Anschließend werden die Matches gestartet und das Gelernte angewendet. Für Getränke und Snacks zwischendurch ist gesorgt und auch Leihschläger sind vorhanden.</p>
+          <p>Ich freue mich auf eure zahlreichen Anmeldungen und auf eine Woche voller Tennis, Spiel, Spaß und Freude!</p>
+          <h2>Anmeldung</h2>
+          <p>Die Anmeldung ist verbindlich. Ich bitte Sie die Kosten des Tenniscamps 2023 bis zum 28.08.23 auf mein Konto zu überweisen.</p>
+          <form method="post" action="https://tennis.deta.dev/tennis-form">
+            <p>Die Felder markiert mit <strong>*</strong> sind Pflichtfelder.</p>
+            <!-- hidden fields start -->
+            <div class="row hidden">
+              <label for="email_subject">Email subject</label>
+              <input hidden id="email_subject" name="email_subject" value="Anmeldung zum Kinder und Jugend Tenniscamp 2023" />
+            </div>
+            <div class="row hidden">
+              <label for="year">Year</label>
+              <input hidden id="year" name="year" value="2023" />
+            </div>
+            <div class="row hidden">
+              <label for="type">Type</label>
+              <input hidden id="type" name="type" value="camp" />
+            </div>
+            <div class="row hidden">
+              <label for="season">Season</label>
+              <input hidden id="season" name="season" value="sommer" />
+            </div>
+            <div class="row hidden">
+              <label for="age_group">Age group</label>
+              <input hidden id="age_group" name="age_group" value="jugend" />
+            </div>
+            <!-- hidden fields end -->
+    
+            <div class="row row--two-columns required">
+              <label for="first_name">Vorname des Kinds</label>
+              <input id="first_name" name="first_name" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="last_name">Nachname des Kinds</label>
+              <input id="last_name" name="last_name" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="name_parent">Name der Eltern</label>
+              <input id="name_parent" name="name_parent" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="address">Straße und Hausnr.</label>
+              <input id="address" name="address" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="city">Stadt</label>
+              <input id="city" name="city" />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="postal_code">Postleitzahl</label>
+              <input id="postal_code" name="postal_code" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="birthday">Geburtsdatum</label>
+              <input id="birthday" name="birthday" type="date" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="phone">Telefonnummer</label>
+              <input id="phone" name="phone" type="tel" required />
+            </div>
+            <div class="row row--two-columns required">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="row">
+              <label for="comments">Weitere Hinweise</label>
+              <textarea id="comments" name="comments" rows="8" cols="50"></textarea>
+            </div>
+            <div class="row required">
+              <input type="checkbox" id="privacy" name="privacy" value="true" required />
+              <label for="privacy">Ich stimme den <a href="privacy.html" target="_blank">Datenschutzbestimmungen</a> zu.</label>
+            </div>
+            <button>Absenden</button>
+          </form>
+          <div id="confirmation" hidden>
+            <h2>Your data was successfully submited. You would receive a confirmation Email. If you do not receive this email, please get in touch with me via phone or email. Thank you.</h2>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <div class="footer__content">
+        <div>
+          <ul>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div>
+        <div>
+          <p>Sparkasse Freiburg Nördlicher Breisgau<br />
+            IBAN: DE71 6805 0101 0013 1442 07<br />
+            BIC: FRSPDE 66 XXX</p>
+        </div>
+        <div>
+          <address>Slaven Gluščević<br />
+            Merzhauserstraße 12<br />
+            79100 Freiburg<br />
+            Telefon: 0176 6214 1964<br />
+            E-Mail: <a href="mailto:info.tennis.slaven@gmail.com">info.tennis.slaven@gmail.com</a>
+          </address>
+          <p class="copyright">&copy; 2022 Slaven Gluščević</p>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    
+    <script>
+      var myApp = {};
+    </script>
+    <script src="resources/js/bundle.js"></script>
+    <script src="resources/js/main.js"></script>
+	</body>
+</html>

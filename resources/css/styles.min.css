@@ -1231,6 +1231,13 @@ main > article aside ul li a {
   }
 }
 
+.meta-data {
+  margin: 1em 0;
+}
+.meta-data td:first-child {
+  padding-right: 2em;
+}
+
 @font-face {
   font-family: "Quicksand";
   src: url("../fonts/Quicksand-Regular.ttf") format("truetype");

@@ -192,4 +192,10 @@ main > article {
   */
 }
 
+.meta-data {
+  margin: 1em 0;
 
+  td:first-child {
+    padding-right: 2em;
+  }
+}

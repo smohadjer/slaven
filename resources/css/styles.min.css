@@ -1426,6 +1426,11 @@ main > article aside ul li a {
 .accordion summary::-webkit-details-marker {
   display: none;
 }
+.accordion summary > * {
+  display: inline;
+  /* so that block level elements don't wrap below marker when there is not enough space */
+  margin: 0;
+}
 .accordion summary::before {
   content: "";
   background: url(../img/down.svg) no-repeat;
@@ -1436,10 +1441,6 @@ main > article aside ul li a {
   display: inline-block;
   vertical-align: text-bottom;
   margin-right: 5px;
-}
-.accordion summary h2 {
-  display: inline-block;
-  margin: 0;
 }
 .accordion[open] summary::before {
   background-image: url(../img/up.svg);

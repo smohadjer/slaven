@@ -768,6 +768,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   width: 100%;
   padding: 0 15px 0;
   box-sizing: border-box;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .header {
@@ -998,18 +999,21 @@ footer {
 }
 @media (min-width: 768px) {
   footer {
-    padding: 20px;
+    padding: 40px 20px 20px;
   }
 }
 footer .footer__content address {
   font-style: normal;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   footer .footer__content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+  }
+  footer .footer__content address {
+    margin-bottom: 0;
   }
 }
 footer .footer__content a {
@@ -1060,7 +1064,7 @@ footer ul li {
   /* to stop pages jumping horizontally when scrollbar appears or disappears */
 }
 body {
-  font: 16px/1.5 Quicksand, arial, verdana, sans-serif;
+  font: 16px/1.6 Quicksand, arial, verdana, sans-serif;
   margin: 0 auto;
   overflow-wrap: break-word;
   /* so that inline elements such as long words do not cause horizontal scrolling. */
@@ -1069,6 +1073,11 @@ body {
     font-size: 18px;
   }
   */
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 a {
@@ -1170,17 +1179,6 @@ main > article {
   padding: 0 15px;
   padding-top: 1em;
   /* we use padding-top instead of margin-top since when linking to article via a hash tag from another page there is enough space from top edge of browser this way. */
-  /*
-  @media (min-width: 1040px) {
-    max-width: 900px;
-    padding: 0;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 1320px) {
-    max-width: 1200px;
-  }
-  */
 }
 @media (min-width: 768px) {
   main > article {
@@ -1232,9 +1230,12 @@ main > article aside ul li a {
 }
 
 .meta-data {
+  padding: 1em;
+  background: #eee;
+  font-weight: 500;
   margin: 1em 0;
 }
-.meta-data td:first-child {
+.meta-data table td:first-child {
   padding-right: 2em;
 }
 
@@ -1288,9 +1289,19 @@ main > article aside ul li a {
 .stage .bg img {
   vertical-align: bottom;
 }
-.stage--home {
-  background: none;
-  clip-path: none;
+.stage--home .stage__wrapper {
+  background: #face69;
+  background: linear-gradient(0deg, #face69 0%, #face69 50%, white 51%);
+}
+@media (min-width: 768px) {
+  .stage--home {
+    background: none;
+    clip-path: none;
+    padding-bottom: 0;
+  }
+  .stage--home .stage__wrapper {
+    background: none;
+  }
 }
 .stage--home .bg {
   clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%);
@@ -1299,6 +1310,10 @@ main > article aside ul li a {
   .stage--home .bg {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 45px));
   }
+}
+.stage--home .teaser-wrapper {
+  background: #face69;
+  padding-bottom: 2em;
 }
 @media (min-width: 768px) {
   .stage--home .teaser-wrapper {

@@ -1454,9 +1454,15 @@ main > article aside ul li a {
 
 form {
   margin-top: 30px;
+  /* fix styling of date input fields on iphone */
 }
 form input {
   font-size: 16px;
+}
+form input[type=date] {
+  -webkit-appearance: none;
+  min-height: 2em;
+  background: none;
 }
 form .table-wrapper {
   max-width: 500px;

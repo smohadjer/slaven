@@ -11,8 +11,10 @@
   box-sizing: border-box;
   //background: $yellow;
   //background: linear-gradient(to bottom, $yellow 10%, #fff 100%);
+  font-size: 1rem;
 
   @media (min-width: 768px) {
+
     padding: 0 20px 0;
 
     &--home {

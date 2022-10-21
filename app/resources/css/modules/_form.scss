@@ -5,6 +5,13 @@ form {
     font-size: 16px;
   }
 
+  /* fix styling of date input fields on iphone */
+  input[type="date"] {
+    -webkit-appearance: none;
+    min-height: 2em;
+    background: none;
+  }
+
   .table-wrapper {
     max-width: 500px;
 

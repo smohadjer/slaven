@@ -49,7 +49,7 @@
     },
     "training_location": {
       "type": "string",
-      "enum": ["zaehringen", "umkirch"]
+      "enum": ["TSV Alemannia Freiburg - Zähringen e.V.", "Tennisclub Umkirch e.V."]
     },
     "training_type": {
       "type": "string"

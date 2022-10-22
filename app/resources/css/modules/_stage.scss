@@ -47,6 +47,7 @@
     .stage__wrapper {
       background: rgb(250,206,105);
       background: linear-gradient(0deg, rgba(250,206,105,1) 0%, rgba(250,206,105,1) 50%, rgba(255,255,255,1) 51%);
+      background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 50%, rgba(255,255,255,1) 51%);
     }
 
     @media (min-width: 768px) {
@@ -79,6 +80,7 @@
 
     .teaser-wrapper {
       background: rgb(250,206,105);
+      background: $lightGray;
       padding-bottom: 2em;
 
 

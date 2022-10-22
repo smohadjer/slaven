@@ -1,7 +1,8 @@
 form {
   margin-top: 30px;
 
-  input {
+  /* to avoid zooming on iPhone when input or textarea get the focus we need to set font-size at least to 16px */
+  input, textarea {
     font-size: 16px;
   }
 

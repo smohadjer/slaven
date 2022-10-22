@@ -27,21 +27,22 @@
 
   nav {
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-right: 0;
+    flex: 0 0 100%;
 
-    @media (max-width: 767px) {
-      flex: 0 0 100%;
-      margin-top: 10px;
-
-      .js & {
-        overflow: hidden;
-        transition: max-height 0.5s;
-        margin-bottom: 0;
-      }
+    .js & {
+      overflow: hidden;
+      transition: max-height 0.5s;
+      margin-bottom: 0;
     }
   
     @media (min-width: 768px) {
+      flex: initial;
+      overflow: initial;
+      transition: none;
+      margin-top: 15px;
+
       .js & {
         max-height: none !important; //used !important to overwrite max-height set by js
       }
@@ -51,51 +52,45 @@
       list-style: none;
       margin: 0;
       padding: 0;
+      margin-bottom: 10px;
 
-      @media (max-width: 767px) {
-        margin-bottom: 10px;
+      @media (min-width: 768px) {
+        margin-bottom: 0;
       }
 
       li {
-        line-height: 1.5;
         color: #444;
         font-weight: bold;
         font-size: 18px;
-  
-        @media (max-width: 767px) {
-          border-bottom: solid 1px #000;
-          line-height: 2.4;
-  
-          &:last-child {
-            border: none;
-          }
-  
-          a {
-            display: block;
-          }
+        line-height: 2.4;
+        border-bottom: solid 1px #000;
+
+        &:last-child {
+          border: none;
+        }
+
+        a {
+          display: block;
         }
   
         @media (min-width: 768px) {
+          line-height: 1.5;
           display: inline;
           margin-left: 20px;
+          border-bottom: 0;
   
           &:first-child {
             margin-left: 0;
           }
+
+          a {
+            display: inline;
+          }
         }
 
-        
         @media (min-width: 1024px) {
-          font-size: 1.25em;
+          font-size: 1.35em;
         }
-
-        /*
-        @media (min-width: 1400px) {
-          margin-left: 30px;
-          font-size: 1.25em;
-          font-weight: 500;
-        }
-        */
       }
     }
   }

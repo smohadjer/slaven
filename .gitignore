@@ -3,6 +3,7 @@
 /npm-debug.log
 .DS_Store
 /dist
+/ve-slaven
 
 .idea
 .ipynb_checkpoints

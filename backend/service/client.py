@@ -1,8 +1,11 @@
 import asyncio
 import logging
 from datetime import datetime
+import urllib.parse
+from urllib.parse import unquote_plus
 
 from fastapi import Request, HTTPException, BackgroundTasks, status
+from fastapi.encoders import jsonable_encoder
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig  # type:ignore
 from motor.motor_asyncio import AsyncIOMotorCollection  # type:ignore
 from pydantic import ValidationError
@@ -28,43 +31,55 @@ class _Tennis(type):
         referer = request.headers.get("referer")
         logging.error(f"{referer=}")
         data = await request.form()
-        email = data.get("email", "")
-        _address = str(data.get("address", "")).replace("+", " ")
-        _hours = data.getlist("training_time")
-        email_subject = data.get("email_subject", "").replace("+", " ")
-        city = data.get("city", "").replace("+", " ")
-        name_of_parent = data.get("name_parent", "").replace("+", " ")
-        age_group = data.get("age_group", "")
-        type_of_form = data.get("type", "")
+        email = unquote_plus(data.get("email", ""))
+        _address = unquote_plus(str(data.get("address", "")))
+        _hours = [unquote_plus(i) for i in (data.getlist("training_time"))]
+        email_subject = unquote_plus(data.get("email_subject", ""))
+        city = unquote_plus(data.get("city", ""))
+        name_of_parent = unquote_plus(data.get("name_parent", ""))
+        age_group = unquote_plus(data.get("age_group", ""))
+        type_of_form = unquote_plus(data.get("type", ""))
+        first_name = unquote_plus(data.get("first_name", ""))
+        last_name = unquote_plus(data.get("last_name", ""))
+        postal_code = unquote_plus(data.get("postal_code", ""))
+        birthday = datetime.strptime(data.get("birthday", ""), "%Y-%m-%d")
+        phone = unquote_plus(data.get("phone", ""))
+        location = unquote_plus(data.get("training_location", ""))
+        training_type = data.getlist("training_type")
+        privacy = True if data.get("privacy") == "true" else False
+        season = unquote_plus(data.get("season", ""))
+        year = unquote_plus(data.get("year"))
+        _type = unquote_plus(data.get("type", ""))
+        comments = unquote_plus(data.get("comments", ""))
         logging.error(f"{age_group=}")
 
         for i in _hours:
             no_commas = i.replace(",", " ")
-            formatted_training_hours.append(no_commas.translate({ord("+"): None}))
-        _training_times = ", ".join(formatted_training_hours)
+            formatted_training_hours.append(no_commas)
+        _training_times = "<br /> ".join(formatted_training_hours)
 
         if age_group == AgeGroup.JUGEND.value:
             if type_of_form == Types.TRAINING.value:
                 try:
                     resp = FormTrainingChildren(
-                        first_name=data.get("first_name", ""),
-                        last_name=data.get("last_name", ""),
+                        first_name=first_name,
+                        last_name=last_name,
                         name_parent=name_of_parent,
                         address=_address,
                         city=city,
-                        postal_code=data.get("postal_code", ""),
-                        birthday=datetime.strptime(data.get("birthday", ""), "%Y-%m-%d"),
-                        phone=data.get("phone", ""),
+                        postal_code=postal_code,
+                        birthday=birthday,
+                        phone=phone,
                         email=email,
-                        location=data.get("training_location", ""),
-                        training_type=data.getlist("training_type"),
+                        location=location,
+                        training_type=training_type,
                         training_time=formatted_training_hours,
-                        privacy=True if data.get("privacy") == "true" else False,
-                        season=data.get("season", ""),
-                        year=data.get("year"),
-                        type=data.get("type", ""),
-                        age_group=data.get("age_group", ""),
-                        comments=data.get("comments", ""))
+                        privacy=privacy,
+                        season=season,
+                        year=year,
+                        type=_type,
+                        age_group=age_group,
+                        comments=comments)
                 except ValidationError as e:
                     raise HTTPException(status_code=400, detail=e.errors())
                 formatted_training_types = ", ".join(resp.training_type)
@@ -87,21 +102,21 @@ class _Tennis(type):
             elif type_of_form == Types.CAMP.value:
                 try:
                     resp = FormCampChildren(
-                        first_name=data.get("first_name", ""),
-                        last_name=data.get("last_name", ""),
+                        first_name=first_name,
+                        last_name=last_name,
                         name_parent=name_of_parent,
                         address=_address,
                         city=city,
-                        postal_code=data.get("postal_code", ""),
-                        birthday=datetime.strptime(data.get("birthday", ""), "%Y-%m-%d"),
-                        phone=data.get("phone", ""),
+                        postal_code=postal_code,
+                        birthday=birthday,
+                        phone=phone,
                         email=email,
-                        privacy=True if data.get("privacy") == "true" else False,
-                        season=data.get("season", ""),
-                        year=data.get("year"),
-                        type=data.get("type", ""),
-                        age_group=data.get("age_group", ""),
-                        comments=data.get("comments", ""))
+                        privacy=privacy,
+                        season=season,
+                        year=year,
+                        type=_type,
+                        age_group=age_group,
+                        comments=comments)
                 except ValidationError as e:
                     raise HTTPException(status_code=400, detail=e.errors())
 
@@ -119,22 +134,22 @@ class _Tennis(type):
             if type_of_form == Types.TRAINING:
                 try:
                     resp = FormTrainingAdult(
-                        first_name=data.get("first_name", ""),
-                        last_name=data.get("last_name", ""),
+                        first_name=first_name,
+                        last_name=last_name,
                         address=_address,
                         city=city,
-                        postal_code=data.get("postal_code", ""),
-                        birthday=datetime.strptime(data.get("birthday", ""), "%Y-%m-%d"),
-                        phone=data.get("phone", ""),
+                        postal_code=postal_code,
+                        birthday=birthday,
+                        phone=phone,
                         email=email,
-                        location=data.get("training_location", ""),
+                        location=location,
                         training_time=formatted_training_hours,
-                        privacy=True if data.get("privacy") == "true" else False,
-                        season=data.get("season", ""),
-                        year=data.get("year"),
-                        type=data.get("type", ""),
-                        age_group=data.get("age_group", ""),
-                        comments=data.get("comments", ""))
+                        privacy=privacy,
+                        season=season,
+                        year=year,
+                        type=_type,
+                        age_group=age_group,
+                        comments=comments)
                 except ValidationError as e:
                     raise HTTPException(status_code=400, detail=e.errors())
                 html = get_html_template(resp, _training_times=_training_times, children=False)

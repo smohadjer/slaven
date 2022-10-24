@@ -47,7 +47,7 @@ class BaseForm(BaseModel):
 
 class FormTrainingAdult(BaseForm):
     training_time: list[str] = Field(..., description="The hours of trainings you could choose", example=["14-15", "15-16"])
-    location: TrainingLocation = Field(..., description="The location of training", example=TrainingLocation.UMKIRCH)
+    location: str = Field(..., description="The location of training", example="Tennisclub Umkirch e.V.")
 
 
 class FormCampChildren(BaseForm):

@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema for camp registration for Kids",
+  "type": "object",
+  "properties": {
+    "age_group": {
+      "type": "string",
+      "enum": ["jugend", "erwachsene"]
+    },
+    "comments": {
+      "type": "string"
+    },
+    "email_subject": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "name_parent": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "privacy": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["training", "camp"]
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 2022
+    }
+  },
+  "required": [
+    "age_group",
+    "email_subject",
+    "first_name",
+    "last_name",
+    "address",
+    "city",
+    "postal_code",
+    "birthday",
+    "phone",
+    "email",
+    "name_parent",
+    "privacy",
+    "type",
+    "year"
+  ]
+}

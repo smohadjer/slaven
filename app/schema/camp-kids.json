@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Schema for training registration",
+  "title": "Schema for camp registration for Kids",
   "type": "object",
   "properties": {
     "age_group": {
@@ -17,6 +17,9 @@
       "type": "string"
     },
     "last_name": {
+      "type": "string"
+    },
+    "name_parent": {
       "type": "string"
     },
     "address": {
@@ -40,17 +43,6 @@
     "privacy": {
       "type": "boolean"
     },
-    "season": {
-      "type": "string",
-      "enum": ["fruehling", "sommer", "herbst", "winter"]
-    },
-    "training_location": {
-      "type": "string",
-      "enum": ["TSV Alemannia Freiburg - Zähringen e.V.", "Tennisclub Umkirch e.V."]
-    },
-    "training_time": {
-      "type": "string"
-    },
     "type": {
       "type": "string",
       "enum": ["training", "camp"]
@@ -68,12 +60,12 @@
     "address",
     "city",
     "postal_code",
+    "birthday",
     "phone",
     "email",
+    "name_parent",
     "privacy",
     "type",
-    "training_location",
-    "training_time",
     "year"
   ]
 }

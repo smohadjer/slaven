@@ -44,13 +44,23 @@
 
   /****** stage on homepage *****/
   &--home {
-    background: none;
-    clip-path: none;
+    .stage__wrapper {
+      background: rgb(250,206,105);
+      background: linear-gradient(0deg, rgba(250,206,105,1) 0%, rgba(250,206,105,1) 50%, rgba(255,255,255,1) 51%);
+      background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 50%, rgba(255,255,255,1) 51%);
+    }
+
+    @media (min-width: 768px) {
+      background: none;
+      clip-path: none;
+      padding-bottom: 0;
+
+      .stage__wrapper {
+        background: none;
+      }
+    }
 
     .bg {
-      img {
-      }
-
       clip-path: polygon(
         0 30px,
         100% 0,
@@ -69,6 +79,11 @@
     }
 
     .teaser-wrapper {
+      background: rgb(250,206,105);
+      background: $lightGray;
+      padding-bottom: 2em;
+
+
       @media (min-width: 768px) {
         position: absolute;
         z-index: 10;

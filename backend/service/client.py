@@ -1,11 +1,9 @@
 import asyncio
 import logging
 from datetime import datetime
-import urllib.parse
 from urllib.parse import unquote_plus
 
 from fastapi import Request, HTTPException, BackgroundTasks, status
-from fastapi.encoders import jsonable_encoder
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig  # type:ignore
 from motor.motor_asyncio import AsyncIOMotorCollection  # type:ignore
 from pydantic import ValidationError
@@ -95,7 +93,6 @@ class _Tennis(type):
 
                 except Exception as e:
                     raise HTTPException(status_code=400, detail=str(e))
-
 
                 # b_task.add_task(self.background_mail, email_subject, email, html)
                 # logging.info("Sending mail in background")

@@ -777,7 +777,7 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
   .header--home {
     position: absolute;
     z-index: 10;
-    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
     min-height: 150px;
   }
 }
@@ -1061,8 +1061,7 @@ footer ul li {
 body {
   font: 16px/1.6 Quicksand, arial, verdana, sans-serif;
   margin: 0 auto;
-  overflow-wrap: break-word;
-  /* so that inline elements such as long words do not cause horizontal scrolling. */
+  overflow-wrap: break-word; /* so that inline elements such as long words do not cause horizontal scrolling. */
 }
 @media (min-width: 1024px) {
   body {
@@ -1167,8 +1166,7 @@ img.object-fit-cover.center-bottom {
 
 main > article {
   padding: 0 15px;
-  padding-top: 1em;
-  /* we use padding-top instead of margin-top since when linking to article via a hash tag from another page there is enough space from top edge of browser this way. */
+  padding-top: 1em; /* we use padding-top instead of margin-top since when linking to article via a hash tag from another page there is enough space from top edge of browser this way. */
 }
 @media (min-width: 768px) {
   main > article {
@@ -1246,8 +1244,7 @@ main > article aside ul li a {
   font-display: swap;
 }
 .stage {
-  margin-top: -10px;
-  /* fix chrome bug showing a thin white line in responsive mode */
+  margin-top: -10px; /* fix chrome bug showing a thin white line in responsive mode */
   background-color: #eee;
   clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%);
   /****** stage on homepage *****/
@@ -1278,9 +1275,9 @@ main > article aside ul li a {
   vertical-align: bottom;
 }
 .stage--home .stage__wrapper {
-  background: #face69;
-  background: linear-gradient(0deg, #face69 0%, #face69 50%, white 51%);
-  background: linear-gradient(0deg, #eeeeee 0%, #eeeeee 50%, white 51%);
+  background: rgb(250, 206, 105);
+  background: linear-gradient(0deg, rgb(250, 206, 105) 0%, rgb(250, 206, 105) 50%, rgb(255, 255, 255) 51%);
+  background: linear-gradient(0deg, rgb(238, 238, 238) 0%, rgb(238, 238, 238) 50%, rgb(255, 255, 255) 51%);
 }
 @media (min-width: 768px) {
   .stage--home {
@@ -1301,7 +1298,7 @@ main > article aside ul li a {
   }
 }
 .stage--home .teaser-wrapper {
-  background: #face69;
+  background: rgb(250, 206, 105);
   background: #eee;
   padding-bottom: 2em;
 }
@@ -1432,8 +1429,7 @@ main > article aside ul li a {
   display: none;
 }
 .accordion summary > * {
-  display: inline;
-  /* so that block level elements don't wrap below marker when there is not enough space */
+  display: inline; /* so that block level elements don't wrap below marker when there is not enough space */
   margin: 0;
 }
 .accordion summary::before {

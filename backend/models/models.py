@@ -37,8 +37,8 @@ class BaseForm(BaseModel):
     type: Types = Field(..., description="What type of of tennis it is", example=Types.CAMP)
     email: EmailStr = Field(..., description="Email of the person sending the form", example="johndoe@gmail.com")
     comments: Optional[str] = Field(..., description="Comment from the person sending the from")
-    season: str = Field(..., description="Season in regards to what season the event is taking place in", example="summer")
-    year: int = Field(..., description="Year in regards to what year the event is taking place in", example=2023)
+    season: Optional[str] = Field(description="Season in regards to what season the event is taking place in", example="summer")
+    year: Optional[int] = Field(description="Year in regards to what year the event is taking place in", example=2023)
     timestamp: datetime = datetime.utcnow()
     birthday: Optional[datetime] = Field(..., description="Birthday of the person sending the form", example=datetime.today())
     privacy: bool = Field(..., description="Allow privacy", example=True)
@@ -56,7 +56,7 @@ class FormCampChildren(BaseForm):
 
 class FormTrainingChildren(FormTrainingAdult):
     name_parent: str = Field(..., description="Name of parent", example="Maria")
-    training_type: list[str] = Field(..., description="The type of trainings you could choose", example=["solo", "group"])
+    training_group: list[str] = Field(..., description="The group of trainings you could choose", example=["solo", "group"])
 
 
 

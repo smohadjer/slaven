@@ -13,7 +13,7 @@ echo 'eval "$(pyenv init --path)"' >> ~/.bashrc
 5. Install python virtual environment and then add folder that is created to .gitignore
 python3 -m venv [putNameOfVirtualEnvironmentHere]
 6. Run following command to activate virtual enviornment:
-source ve-slaven/bin/activate
+source nameOfVirtualEnvironment/bin/activate
 7. Change to backend folder via cd backend
 8. Run command: `pip install -r requirements.txt` to install python packages
 9. Create a .env in root of project and add your environment variables to it.

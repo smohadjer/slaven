@@ -45,13 +45,12 @@
     },
     "season": {
       "type": "string",
-      "enum": ["fruehling", "sommer", "herbst", "winter"]
+      "enum": ["sommer", "winter"]
     },
     "training_location": {
-      "type": "string",
-      "enum": ["TSV Alemannia Freiburg - Zähringen e.V.", "Tennisclub Umkirch e.V."]
+      "type": "string"
     },
-    "training_type": {
+    "training_group": {
       "type": "string"
     },
     "training_time": {
@@ -81,7 +80,7 @@
     "privacy",
     "type",
     "training_location",
-    "training_type",
+    "training_group",
     "training_time",
     "year"
   ]

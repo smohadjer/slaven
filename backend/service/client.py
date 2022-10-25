@@ -43,7 +43,7 @@ class _Tennis(type):
         birthday = datetime.strptime(data.get("birthday", ""), "%Y-%m-%d")
         phone = unquote_plus(data.get("phone", ""))
         location = unquote_plus(data.get("training_location", ""))
-        training_type = data.getlist("training_type")
+        training_group = data.getlist("training_group")
         privacy = True if data.get("privacy") == "true" else False
         season = unquote_plus(data.get("season", ""))
         year = unquote_plus(data.get("year"))
@@ -70,7 +70,7 @@ class _Tennis(type):
                         phone=phone,
                         email=email,
                         location=location,
-                        training_type=training_type,
+                        training_group=training_group,
                         training_time=formatted_training_hours,
                         privacy=privacy,
                         season=season,
@@ -80,9 +80,9 @@ class _Tennis(type):
                         comments=comments)
                 except ValidationError as e:
                     raise HTTPException(status_code=400, detail=e.errors())
-                formatted_training_types = ", ".join(resp.training_type)
+                formatted_training_groups = ", ".join(resp.training_group)
 
-                html = get_html_template(resp, children=True, formatted_training_types=formatted_training_types,
+                html = get_html_template(resp, children=True, formatted_training_groups=formatted_training_groups,
                                          _training_times=_training_times)
 
                 # TODO: remove this try except and use background tasks

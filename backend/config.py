@@ -40,7 +40,7 @@ conf = ConnectionConfig(
 
 def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrainingChildren],
                       children: bool,
-                      formatted_training_types: Optional[str] = None, _training_times: Optional[str] = None):
+                      formatted_training_groups: Optional[str] = None, _training_times: Optional[str] = None):
     template = f"""
             <html>
                 <body>
@@ -102,11 +102,11 @@ def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrain
         <td>E-Mail:</td>
         <td>{resp.email}</td>
       </tr>"""
-    if formatted_training_types:
+    if formatted_training_groups:
         template += f"""
                     <tr valign="top">
                         <td>Trainingswunsch:</td>
-                        <td>{formatted_training_types}</td>
+                        <td>{formatted_training_groups}</td>
                         </tr>
                     """
     if _training_times:

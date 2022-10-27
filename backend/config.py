@@ -126,7 +126,7 @@ def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrain
     template += f"""
                 <tr valign="top">
                     <td>Weitere Hinweise:</td>
-                    <td>{resp.comments}</td>
+                    <td style="white-space: pre;">{resp.comments}</td>
                 </tr>
 
             </table> 

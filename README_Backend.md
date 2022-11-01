@@ -22,8 +22,10 @@ source nameOfVirtualEnvironment/bin/activate
 11. To see the api endpoints go to http://127.0.0.1:8000/docs
 12. Now you can change action of forms to local endpoint at http://127.0.0.1:8000/tennis-form and test forms locally.
 
-
-
-
-
+## Deployment to Deta.sh from a Mac
+1. Download deta cli from: https://docs.deta.sh/docs/cli/install
+2. Cd to backend folder
+3. run: deta login in terminal and it will take you to login page of deta in browser, use credentials in .crendtials.evn to login
+4. run: deta update -e .env
+5. run: deta deploy
 

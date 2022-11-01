@@ -4,6 +4,7 @@
 .DS_Store
 /dist
 /ve-slaven
+.credentials.env
 
 .idea
 .ipynb_checkpoints

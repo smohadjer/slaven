@@ -8,7 +8,7 @@ from datetime import datetime
 from models.models import FormTrainingChildren, FormTrainingAdult, FormCampChildren
 import pathlib
 
-path = pathlib.Path("main.py").resolve().parent.parent
+# path = pathlib.Path("main.py").resolve().parent.parent
 
 
 class Settings(BaseSettings):
@@ -21,7 +21,7 @@ class Settings(BaseSettings):
 
 # specify .env file location as Config attribute
     class Config:
-        env_file: str = f"{path}/.env"
+        env_file: str = ".env"
 
 
 settings = Settings()

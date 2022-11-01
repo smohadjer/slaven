@@ -48,7 +48,7 @@ def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrain
                <table>
                 <tr valign="top">
                     <td>Anmeldungsdatum:</td>
-                    <td>{resp.timestamp.strftime("%d/%m/%Y")}</td>
+                    <td>{resp.timestamp.strftime("%d.%m.%Y")}</td>
                   </tr>
               <tr valign="top">
               """
@@ -78,7 +78,7 @@ def get_html_template(resp: Union[FormTrainingAdult, FormCampChildren, FormTrain
                     </tr>
                     <tr valign="top">
                         <td>Geburtsdatum:</td>
-                        <td>{resp.birthday.strftime("%d/%m/%Y")}</td>
+                        <td>{resp.birthday.strftime("%d.%m.%Y")}</td>
                     </tr>"""
         
     template += f"""

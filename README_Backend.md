@@ -1,4 +1,4 @@
-## Running backend on localhost on Mac**
+## Install backend on Mac**
 Step 3 and 4 are optional.
 
 1. Install Python using command: `brew install python@3.10`
@@ -15,12 +15,13 @@ python3 -m venv [putNameOfVirtualEnvironmentHere]
 6. Run following command to activate virtual enviornment:
 source nameOfVirtualEnvironment/bin/activate
 7. Change to backend folder via cd backend
-8. Run command: `pip install -r requirements.txt` to install python packages
+8. Run command: `pip3 install -r requirements.txt` to install python packages
 9. Create a .env in root of project and add your environment variables to it.
-10. Run below command to start a http server at http://127.0.0.1:8000/
-`uvicorn main:app --reload`
-11. To see the api endpoints go to http://127.0.0.1:8000/docs
-12. Now you can change action of forms to local endpoint at http://127.0.0.1:8000/tennis-form and test forms locally.
+
+## Run backend server
+1. Run `uvicorn main:app --reload` to start a http server at http://127.0.0.1:8000/.
+2. To see the api endpoints go to http://127.0.0.1:8000/docs
+3. Now you can change action of forms to local endpoint at http://127.0.0.1:8000/tennis-form and test forms locally.
 
 ## Deployment to Deta.sh from a Mac
 1. Download deta cli from: https://docs.deta.sh/docs/cli/install

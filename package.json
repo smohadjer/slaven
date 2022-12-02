@@ -1,12 +1,11 @@
 {
-	"name": "boilerplate",
-	"version": "1.0.1",
-	"description": "Boilerplate for Web projects",
+	"name": "Website for Slaven Gluščević",
+	"version": "1.0.2",
+	"description": "Website for Slaven Gluščević",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/smohadjer/boilerplate"
+		"url": "https://github.com/smohadjer/slaven"
 	},
-	"license": "MIT",
 	"scripts": {
 		"precompile": "node node_modules/build/bin/clean.js",
 		"compile": "node node_modules/build/bin/compile.js",
@@ -21,7 +20,7 @@
 		"build": "npm run serve && rollup -c && npm run copyDist && npm run useref"
 	},
 	"devDependencies": {
-		"build": "git://github.com/smohadjer/build.git#0.0.42",
+		"build": "git://github.com/smohadjer/build.git#0.0.8",
 		"handlebars": "^4.7.7"
 	},
 	"dependencies": {

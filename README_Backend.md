@@ -19,7 +19,7 @@ source nameOfVirtualEnvironment/bin/activate
 9. Create a .env in root of project and add your environment variables to it.
 
 ## Run backend server
-1. Run `uvicorn main:app --reload` to start a http server at http://127.0.0.1:8000/.
+1. In backend folder run `uvicorn main:app --reload` to start a http server at http://127.0.0.1:8000/.
 2. To see the api endpoints go to http://127.0.0.1:8000/docs
 3. Now you can change action of forms to local endpoint at http://127.0.0.1:8000/tennis-form and test forms locally.
 

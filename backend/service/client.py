@@ -9,7 +9,7 @@ from motor.motor_asyncio import AsyncIOMotorCollection  # type:ignore
 from pydantic import ValidationError
 from starlette.responses import RedirectResponse
 
-from config import conf, get_html_template
+from config import conf, get_html_template, settings
 # from db import client
 from models.models import FormTrainingChildren, AgeGroup, Types, FormTrainingAdult, FormCampChildren
 
@@ -87,7 +87,7 @@ class _Tennis(type):
 
                 # TODO: remove this try except and use background tasks
                 try:
-                    await self.send_mail(email_subject, email, html)
+                    await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
                     return RedirectResponse(url=referer + "slaven/training-anmeldung-jugend.html#confirmed",
                                         status_code=status.HTTP_303_SEE_OTHER)
 
@@ -120,7 +120,7 @@ class _Tennis(type):
                 html = get_html_template(resp, children=True, _training_times=_training_times)
 
                 try:
-                    await self.send_mail(email_subject, email, html)
+                    await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
                     return RedirectResponse(url=referer + "slaven/camp_sommer_2023.html#confirmed",
                                             status_code=status.HTTP_303_SEE_OTHER)
 
@@ -152,7 +152,7 @@ class _Tennis(type):
                 html = get_html_template(resp, _training_times=_training_times, children=False)
 
                 try:
-                    await self.send_mail(email_subject, email, html)
+                    await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
                     return RedirectResponse(url=referer + "slaven/training-anmeldung.html#confirmed",
                                             status_code=status.HTTP_303_SEE_OTHER)
 
@@ -164,13 +164,13 @@ class _Tennis(type):
         else:
             raise HTTPException(status_code=400, detail=f"{age_group} is not supported right now")
 
-    async def send_mail(self, subject: str, recipients: str, html: str) -> None:
-        message = MessageSchema(subject=subject, recipients=[recipients], html=html, subtype="html")
+    async def send_mail(self, subject: str, recipients: list[str], html: str) -> None:
+        message = MessageSchema(subject=subject, recipients=recipients, html=html, subtype="html")
         fm: FastMail = FastMail(conf)
         await fm.send_message(message)
         logging.info(f"Email to {recipients} sent")
 
-    async def background_mail(self, subject: str, recipients: str, html: str):
+    async def background_mail(self, subject: str, recipients: list[str], html: str):
         loop = asyncio.get_event_loop()
         loop.create_task(self.send_mail(subject, recipients, html))
 

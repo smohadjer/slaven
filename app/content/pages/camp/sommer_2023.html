@@ -31,27 +31,14 @@
         <p>Die Felder markiert mit <strong>*</strong> sind Pflichtfelder.</p>
         <!-- hidden fields start -->
         <div class="row hidden">
-          <label for="email_subject">Email subject</label>
-          <input hidden id="email_subject" name="email_subject" value="TSV Sommer Camp 2023 2023" />
-        </div>
-        <div class="row hidden">
-          <label for="year">Year</label>
-          <input hidden id="year" name="year" value="2023" />
-        </div>
-        <div class="row hidden">
-          <label for="type">Type</label>
-          <input hidden id="type" name="type" value="camp" />
-        </div>
-        <div class="row hidden">
-          <label for="season">Season</label>
-          <input hidden id="season" name="season" value="sommer" />
-        </div>
-        <div class="row hidden">
-          <label for="age_group">Age group</label>
-          <input hidden id="age_group" name="age_group" value="jugend" />
+          <input hidden name="email_subject" value="TSV Sommer Camp 2023" />
+          <input hidden name="response_url" value="camp/sommer_2023.html#confirmed" />
+          <input hidden name="year" value="2023" />
+          <input hidden name="type" value="camp" />
+          <input hidden name="season" value="sommer" />
+          <input hidden name="age_group" value="jugend" />
         </div>
         <!-- hidden fields end -->
-
         <div class="row row--two-columns required">
           <label for="first_name">Vorname des Kinds</label>
           <input id="first_name" name="first_name" required />

@@ -27,7 +27,6 @@ class _Tennis(type):
     async def registration(self, request: Request):
         formatted_training_hours: list[str] = []
         referer = request.headers.get("referer")
-        logging.error(f"{referer=}")
         data = await request.form()
         email = unquote_plus(data.get("email", ""))
         _address = unquote_plus(str(data.get("address", "")))
@@ -49,7 +48,7 @@ class _Tennis(type):
         year = unquote_plus(data.get("year"))
         _type = unquote_plus(data.get("type", ""))
         comments = unquote_plus(data.get("comments", ""))
-        logging.error(f"{age_group=}")
+        redirect_url = unquote_plus(data.get("response_url", ""))
 
         for i in _hours:
             no_commas = i.replace(",", " ")
@@ -88,7 +87,7 @@ class _Tennis(type):
                 # TODO: remove this try except and use background tasks
                 try:
                     await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
-                    return RedirectResponse(url=referer + "slaven/training-anmeldung-jugend.html#confirmed",
+                    return RedirectResponse(url=referer + redirect_url,
                                         status_code=status.HTTP_303_SEE_OTHER)
 
                 except Exception as e:
@@ -121,7 +120,7 @@ class _Tennis(type):
 
                 try:
                     await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
-                    return RedirectResponse(url=referer + "slaven/camp_sommer_2023.html#confirmed",
+                    return RedirectResponse(url=referer + redirect_url,
                                             status_code=status.HTTP_303_SEE_OTHER)
 
                 except Exception as e:
@@ -153,7 +152,7 @@ class _Tennis(type):
 
                 try:
                     await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
-                    return RedirectResponse(url=referer + "slaven/training-anmeldung.html#confirmed",
+                    return RedirectResponse(url=referer + redirect_url,
                                             status_code=status.HTTP_303_SEE_OTHER)
 
                 except Exception as e:

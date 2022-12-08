@@ -265,12 +265,13 @@
     });
     var form = document.querySelector('form');
     if (form) {
-      console.log('page has form');
-      console.log(window.location.hash);
       if (window.location.hash === '#confirmed') {
         form.setAttribute('hidden', 'hidden');
         var confirmation = document.querySelector('#confirmation');
         confirmation.removeAttribute('hidden');
+        confirmation.scrollIntoView({
+          behavior: "smooth"
+        });
       }
     }
   });

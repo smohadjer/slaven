@@ -45,15 +45,11 @@ ready(function() {
 
 	const form = document.querySelector('form');
 	if (form) {
-		console.log('page has form');
-		console.log(window.location.hash);
-
 		if (window.location.hash === '#confirmed') {
 			form.setAttribute('hidden', 'hidden');
 			const confirmation = document.querySelector('#confirmation');
 			confirmation.removeAttribute('hidden');
-		} else {
-
+			confirmation.scrollIntoView({behavior: "smooth"});
 		}
 	}
 });

@@ -24,6 +24,9 @@ class _Tennis(type):
     #     collection = settings.registration_collection
     #     return client[db].get_collection(collection)
 
+    owner_email = settings.MAIL_FROM
+    send_to_owner = settings.SEND_TO_OWNER
+
     async def registration(self, request: Request):
         formatted_training_hours: list[str] = []
         referer = request.headers.get("referer")
@@ -49,6 +52,8 @@ class _Tennis(type):
         _type = unquote_plus(data.get("type", ""))
         comments = unquote_plus(data.get("comments", ""))
         redirect_url = unquote_plus(data.get("response_url", ""))
+
+        emails = [email, self.owner_email if self.send_to_owner else email]
 
         for i in _hours:
             no_commas = i.replace(",", " ")
@@ -86,7 +91,7 @@ class _Tennis(type):
 
                 # TODO: remove this try except and use background tasks
                 try:
-                    await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
+                    await self.send_mail(email_subject, emails, html)                     
                     return RedirectResponse(url=referer + redirect_url,
                                         status_code=status.HTTP_303_SEE_OTHER)
 
@@ -119,7 +124,7 @@ class _Tennis(type):
                 html = get_html_template(resp, children=True, _training_times=_training_times)
 
                 try:
-                    await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
+                    await self.send_mail(email_subject, emails, html)
                     return RedirectResponse(url=referer + redirect_url,
                                             status_code=status.HTTP_303_SEE_OTHER)
 
@@ -151,7 +156,7 @@ class _Tennis(type):
                 html = get_html_template(resp, _training_times=_training_times, children=False)
 
                 try:
-                    await self.send_mail(email_subject, [email, settings.MAIL_FROM],  html)
+                    await self.send_mail(email_subject, emails, html)
                     return RedirectResponse(url=referer + redirect_url,
                                             status_code=status.HTTP_303_SEE_OTHER)
 

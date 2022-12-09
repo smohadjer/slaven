@@ -15,6 +15,7 @@ class Settings(BaseSettings):
     MAIL_USERNAME: str
     MAIL_PASSWORD: str
     MAIL_FROM: str
+    SEND_TO_OWNER: bool
     # MONGO_URI: str
     # DB_NAME: str
     # registration_collection: str = "Registration"

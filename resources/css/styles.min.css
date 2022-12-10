@@ -874,14 +874,14 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
     color: white;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .logo {
     font-size: 1.8em;
   }
-}
-@media (min-width: 768px) {
-  .home .logo {
-    top: 120px;
+  .header--home .logo {
+    font-size: 2.2em;
+    top: 20px;
+    left: 10px;
   }
 }
 .logo:hover {
@@ -951,6 +951,10 @@ article, aside, main, details, figcaption, figure, footer, header, hgroup, menu,
     letter-spacing: 9.8px;
     font-size: 18px;
   }
+  .header--home .logo .tagline {
+    letter-spacing: 11px;
+    font-size: 24px;
+  }
 }
 
 header .hamburger {
@@ -1013,6 +1017,12 @@ footer .footer__content address {
 }
 footer .footer__content a {
   font-weight: 500;
+}
+footer .footer__content .copyright {
+  display: inline-block;
+  background: url(../img/logo.svg) right bottom no-repeat;
+  background-size: 30px;
+  padding: 20px 40px 0 0;
 }
 footer ul {
   list-style: none;

@@ -11,9 +11,11 @@
     font-weight: bold;
     color: $orange;
     list-style-type: none;
+    padding-left: 25px;
+    text-indent: -25px;
 
     &::-webkit-details-marker {
-      display:none;
+      display: none;
     }
 
     > * {
@@ -29,13 +31,15 @@
       width: 22px;
       height: 23px;
       display: inline-block;
-      vertical-align: text-bottom;
+      vertical-align: -2px;
       margin-right: 5px;
+      transition: all 0.25s;
     }
   }
 
   &[open] summary::before {
-    background-image: url(../img/up.svg);
+    //background-image: url(../img/up.svg);
+    transform: rotate(180deg);
   }
 
   &__content {

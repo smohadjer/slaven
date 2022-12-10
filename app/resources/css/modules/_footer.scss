@@ -34,6 +34,13 @@ footer {
     a {
       font-weight: 500;
     }
+
+    .copyright {
+      display: inline-block;
+      background: url(../img/logo.svg) right bottom no-repeat;
+      background-size: 30px;
+      padding: 20px 40px 0 0;
+    }
   }
 
 	ul {

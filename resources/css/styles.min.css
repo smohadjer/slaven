@@ -1424,6 +1424,8 @@ main > article aside ul li a {
   font-weight: bold;
   color: #C64200;
   list-style-type: none;
+  padding-left: 25px;
+  text-indent: -25px;
 }
 .accordion summary::-webkit-details-marker {
   display: none;
@@ -1440,11 +1442,12 @@ main > article aside ul li a {
   width: 22px;
   height: 23px;
   display: inline-block;
-  vertical-align: text-bottom;
+  vertical-align: -2px;
   margin-right: 5px;
+  transition: all 0.25s;
 }
 .accordion[open] summary::before {
-  background-image: url(../img/up.svg);
+  transform: rotate(180deg);
 }
 .accordion__content {
   padding-bottom: 1em;

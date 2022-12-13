@@ -42,7 +42,6 @@ class _Tennis(type):
         first_name = unquote_plus(data.get("first_name", ""))
         last_name = unquote_plus(data.get("last_name", ""))
         postal_code = unquote_plus(data.get("postal_code", ""))
-        birthday = datetime.strptime(data.get("birthday", ""), "%Y-%m-%d")
         phone = unquote_plus(data.get("phone", ""))
         location = unquote_plus(data.get("training_location", ""))
         training_group = data.getlist("training_group")
@@ -52,8 +51,11 @@ class _Tennis(type):
         _type = unquote_plus(data.get("type", ""))
         comments = unquote_plus(data.get("comments", ""))
         redirect_url = unquote_plus(data.get("response_url", ""))
+        birthday = data.get("birthday", None)
+        if birthday:
+            birthday = datetime.strptime(birthday, "%Y-%m-%d")
 
-        emails = [email, self.owner_email if self.send_to_owner else email]
+        emails = [email, self.owner_email] if self.send_to_owner else [email]
 
         for i in _hours:
             no_commas = i.replace(",", " ")
@@ -140,7 +142,7 @@ class _Tennis(type):
                         address=_address,
                         city=city,
                         postal_code=postal_code,
-                        birthday=birthday,
+                        birthday=birthday if birthday else None,
                         phone=phone,
                         email=email,
                         location=location,
@@ -163,7 +165,7 @@ class _Tennis(type):
                 except Exception as e:
                     raise HTTPException(status_code=400, detail=str(e))
 
-            elif type_of_form is Types.CAMP:
+            elif type_of_form == Types.CAMP:
                 raise HTTPException(status_code=400, detail=f"{type_of_form} is not supported right now")
         else:
             raise HTTPException(status_code=400, detail=f"{age_group} is not supported right now")

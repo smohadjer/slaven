@@ -1,4 +1,4 @@
-<header class="header{{#if home}} header--home{{/if}}">
+<header class="header{{#if (eq pageId 'index')}} header--home{{/if}}">
   <div class="logo">
     <span class="name">Slaven Gluščević</span>
     <div class="tagline">
@@ -15,10 +15,17 @@
   </button>
   <nav data-set-max-height="true">
     <ul>
-      <li>{{#if home}}Home{{else}}<a href="/index.html">Home</a>{{/if}}</li>
-      <li>{{#if training}}Training{{else}}<a href="/training/ueberblick.html">Training</a>{{/if}}</li>
-      <li>{{#if camp}}Tenniscamp{{else}}<a href="/camp/ueberblick.html">Tenniscamp{{/if}}</a></li>
-      <li>{{#if about}}Über mich{{else}}<a href="/ueber-mich.html">Über mich{{/if}}</a></li>
+      <li>{{#if (eq pageId 'index')}}Home{{else}}<a href="/index.html">Home</a>{{/if}}</li>
+      <li>{{#if (or 
+        (eq pageId 'training/ueberblick') 
+        (eq pageId 'training/anmeldung-erwachsene') 
+        (eq pageId 'training/anmeldung-jugend') 
+      )}}Training{{else}}<a href="/training/ueberblick.html">Training</a>{{/if}}</li>
+      <li>{{#if (or 
+        (eq pageId 'camp/ueberblick') 
+        (eq pageId 'camp/2023') 
+      )}}Tenniscamp{{else}}<a href="/camp/ueberblick.html">Tenniscamp</a>{{/if}}</li>
+      <li>{{#if (eq pageId 'ueber-mich')}}Über mich{{else}}<a href="/ueber-mich.html">Über mich</a>{{/if}}</li>
     </ul>
   </nav>
 </header>
